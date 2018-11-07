@@ -1,3 +1,9 @@
+
+@font-face {
+    font-family: 'arimo';
+    src: url('../fonts/arimo/arimo-regular-webfont.woff') format('woff');
+}
+
 body {
 	margin: 0;
 	font-family: sans-serif;
@@ -9,11 +15,14 @@ header{
 	background: #00448C;
 }
 
+
 #btn-menu {
+	/* desaparecer el check del menu*/
 	display: none;
 }
 
 header label {
+	/* desaparecer el check del menu*/
 	display: none;
 	width: 30px;
 	height: 30px;
@@ -29,11 +38,15 @@ header label:hover {
     background: rgba( 0,0,0,0.3);
 }
 
-
-.menu ul {
+/*  **********************************************  Menu  MOVIL  ********************************************* */
+.menu-movil{
+	display: none;
+}
+.menu-movil ul {
 	margin: 0;
 	list-style: none;
 	padding: 0;
+	/* convertir en caja flexible y de e forma horizontal*/
 	display: flex;
 	/* posicion del menu de forma horizontal*/
 	flex-direction: row;
@@ -42,21 +55,23 @@ header label:hover {
 	justify-content: center; */
 }
 
-.menu li{
+.menu-movil li{
 	/*text-align: center;*/
 
 	/* centrar texto 
 	flex-grow: 1; */
 }
 
-.menu li:hover{
+.menu-movil li:hover{
 	cursor: pointer;
 	/* Efecto sombreado sobre el menu */
     background: rgba( 0,0,0,0.3);
 }
 
-.menu li a{
+.menu-movil li a{
+	font-family: 'arimo';	
 	display: block;
+	/* separacion vertical y horizontal de menu */
 	padding: 10px 20px;
 	color: #fff;
 	/*quita la linea de link del texto*/
@@ -64,24 +79,89 @@ header label:hover {
 }
 
 
-.menu a {
+.menu-movil a {
 	display: block;
 	padding:  15px 20px;
 	color: #fff;
 }
 
-.menu ul ul {
+.menu-movil ul ul {
 	display: none;
 }
-.menu ul li:hover ul{
+.menu-movil ul li:hover ul{
    display: block;
    background: #00448C;
    position: absolute;
 }
 
-.menu ul ul a{
+.menu-movil ul ul a{
 	padding: 15px 40px;
 }
+
+/*******************************************Menu WEB*****************************************************/
+
+
+.menu-web ul {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	/* convertir en caja flexible y de e forma horizontal*/
+	display: flex;
+	/* posicion del menu de forma horizontal*/
+	flex-direction: row;
+
+	/* para centrar el texto sobre la barra
+	justify-content: center; */
+}
+
+.menu-web li{
+	/*text-align: center;*/
+
+	/* centrar texto 
+	flex-grow: 1; */
+}
+
+.menu-web li:hover{
+	cursor: pointer;
+	/* Efecto sombreado sobre el menu */
+    background: rgba( 0,0,0,0.3);
+}
+
+.menu-web li a{
+	font-family: 'arimo';	
+	display: block;
+	/* separacion vertical y horizontal de menu */
+	padding: 10px 20px;
+	color: #fff;
+	/*quita la linea de link del texto*/
+	text-decoration: none;
+}
+
+
+.menu-web a {
+	display: block;
+	padding:  15px 20px;
+	color: #fff;
+}
+
+.menu-web ul ul {
+	display: none;
+}
+.menu-web ul li:hover ul{
+   display: block;
+   background: #00448C;
+   position: absolute;
+}
+
+.menu-web ul ul a{
+	padding: 15px 40px;
+}
+
+
+
+
+
+
 
 
 .sub-li {
@@ -158,6 +238,10 @@ header label:hover {
 		border: 1px;
 
 }
+
+.menu-actualizar li:hover{
+	cursor: pointer;
+}
 .menu-actualizar ul{
 		flex-direction: column;
 		margin: 0;
@@ -180,6 +264,10 @@ header label:hover {
 
 
 
+
+
+
+
 /* https://www.youtube.com/watch?v=FL_odxf4zq4 */
 /* media query*/
 
@@ -188,9 +276,13 @@ header label:hover {
 	header label {
 		display:  block;
 	}
+	.menu-web{
+		display: none;
+	}
 
-	.menu {
+	.menu-movil {
 		/*con el posicion absolute para que se salga el menu web*/
+		display: block;
 		position: absolute;
 		background: #00448C;
 		width: 70%;
@@ -199,21 +291,23 @@ header label:hover {
 		transition: all 0.1s;
 	}
 
-	.menu ul{
+	.menu-movil ul{
+		/* cambio a columna el menu*/
 		flex-direction: column;
 	}
 
-	.menu li{
+	.menu-movil li{
+		/* Linea superior sobre el menu */
 		border-top: 1px solid #fff;
 	}
 
-	.menu ul li:hover ul{
+	.menu-movil ul li:hover ul{
 		display: none;
 		position: static;
 	}
 
 	/* cuando le de click */
-	#btn-menu:checked ~  .menu {
+	#btn-menu:checked ~  .menu-movil {
 		margin: 0;
 	}
 }
