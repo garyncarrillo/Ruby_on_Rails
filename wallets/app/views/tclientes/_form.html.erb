@@ -1,0 +1,71 @@
+<%= form_with(model: tcliente, local: true) do |form| %>
+  <% if tcliente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tcliente.errors.count, "error") %> prohibited this tcliente from being saved:</h2>
+
+      <ul>
+      <% tcliente.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <h3 style="font-weight: bold; font-size=16px; ">Documento de Identidad:</h3>
+    <!--
+    <%= form.label :idcliente %>
+    -->
+    <%= form.text_field :idcliente, id: :tcliente_idcliente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombres %>
+    <%= form.text_field :nombres, id: :tcliente_nombres %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apellidos %>
+    <%= form.text_field :apellidos, id: :tcliente_apellidos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion, id: :tcliente_direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :celular %>
+    <%= form.text_field :celular, id: :tcliente_celular %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correo %>
+    <%= form.text_field :correo, id: :tcliente_correo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado %>
+    <%= form.text_field :estado, id: :tcliente_estado %>
+  </div>
+
+  <div class="field">
+     <h3 style="font-weight: bold; font-size=16px; ">Fecha de Grabacion:</h3>
+    <!--
+    <%= form.label :fecgrab %>
+    -->
+    <%= form.text_field :fecgrab, id: :tcliente_fecgrab %>
+  </div>
+
+  <div class="field">
+   <h3 style="font-weight: bold; font-size=16px; ">Usuario de Grabacion:</h3>
+    <!--
+    <%= form.label :usergrab %>
+    -->
+    <%= form.text_field :usergrab, id: :tcliente_usergrab %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Twallets Cs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idcredito</th>
+      <th>Idcliente</th>
+      <th>Idcuota</th>
+      <th>Idpago</th>
+      <th>Idinteres</th>
+      <th>Idinteres mora</th>
+      <th>Valor capital</th>
+      <th>Valor interes</th>
+      <th>Valor mora</th>
+      <th>Valor capital pagado</th>
+      <th>Valor interes pagado</th>
+      <th>Valor interes mora pagado</th>
+      <th>Numero cuota</th>
+      <th>Numero cuota pendiente</th>
+      <th>Fechainicio</th>
+      <th>Fechafin</th>
+      <th>Fecgrab</th>
+      <th>Usergrab</th>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @twallets_cs.each do |twallets_c| %>
+      <tr>
+        <td><%= twallets_c.idcredito %></td>
+        <td><%= twallets_c.idcliente %></td>
+        <td><%= twallets_c.idcuota %></td>
+        <td><%= twallets_c.idpago %></td>
+        <td><%= twallets_c.idinteres %></td>
+        <td><%= twallets_c.idinteres_mora %></td>
+        <td><%= twallets_c.valor_capital %></td>
+        <td><%= twallets_c.valor_interes %></td>
+        <td><%= twallets_c.valor_mora %></td>
+        <td><%= twallets_c.valor_capital_pagado %></td>
+        <td><%= twallets_c.valor_interes_pagado %></td>
+        <td><%= twallets_c.valor_interes_mora_pagado %></td>
+        <td><%= twallets_c.numero_cuota %></td>
+        <td><%= twallets_c.numero_cuota_pendiente %></td>
+        <td><%= twallets_c.fechainicio %></td>
+        <td><%= twallets_c.fechafin %></td>
+        <td><%= twallets_c.fecgrab %></td>
+        <td><%= twallets_c.usergrab %></td>
+        <td><%= twallets_c.estado %></td>
+        <td><%= link_to 'Show', twallets_c %></td>
+        <td><%= link_to 'Edit', edit_twallets_c_path(twallets_c) %></td>
+        <td><%= link_to 'Destroy', twallets_c, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Twallets C', new_twallets_c_path %>

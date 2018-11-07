@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Usuarios del Sistema</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idcobrador</th>
+      <th>Clave</th>
+      <th>Correo</th>
+      <th>Celular</th>
+      <th>Direccion</th>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tcobradors.each do |tcobrador| %>
+      <tr>
+        <td><%= tcobrador.idcobrador %></td>
+        <td><%= tcobrador.clave %></td>
+        <td><%= tcobrador.correo %></td>
+        <td><%= tcobrador.celular %></td>
+        <td><%= tcobrador.direccion %></td>
+        <td><%= tcobrador.estado %></td>
+        <td><%= link_to 'Mostrar', tcobrador %></td>
+        <td><%= link_to 'Editar', edit_tcobrador_path(tcobrador) %></td>
+        <td><%= link_to 'Eliminar', tcobrador, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevos Usuarios', new_tcobrador_path %>

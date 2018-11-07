@@ -1,0 +1,2 @@
+module TinteresHelper
+end

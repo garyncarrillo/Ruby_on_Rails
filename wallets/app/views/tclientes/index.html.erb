@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tclientes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idcliente</th>
+      <th>Nombres</th>
+      <th>Apellidos</th>
+      <th>Direccion</th>
+      <th>Celular</th>
+      <th>Correo</th>
+      <th>Estado</th>
+      <th>Fecgrab</th>
+      <th>Usergrab</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tclientes.each do |tcliente| %>
+      <tr>
+        <td><%= tcliente.idcliente %></td>
+        <td><%= tcliente.nombres %></td>
+        <td><%= tcliente.apellidos %></td>
+        <td><%= tcliente.direccion %></td>
+        <td><%= tcliente.celular %></td>
+        <td><%= tcliente.correo %></td>
+        <td><%= tcliente.estado %></td>
+        <td><%= tcliente.fecgrab %></td>
+        <td><%= tcliente.usergrab %></td>
+        <td><%= link_to 'Show', tcliente %></td>
+        <td><%= link_to 'Edit', edit_tcliente_path(tcliente) %></td>
+        <td><%= link_to 'Destroy', tcliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tcliente', new_tcliente_path %>

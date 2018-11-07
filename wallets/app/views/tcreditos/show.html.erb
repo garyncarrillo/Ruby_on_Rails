@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idcredito:</strong>
+  <%= @tcredito.idcredito %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @tcredito.valor %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @tcredito.descripcion %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @tcredito.estado %>
+</p>
+
+<%= link_to 'Edit', edit_tcredito_path(@tcredito) %> |
+<%= link_to 'Back', tcreditos_path %>

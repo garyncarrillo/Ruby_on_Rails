@@ -1,0 +1,3 @@
+class TwallesD < ApplicationRecord
+
+end

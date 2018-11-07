@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<script type="text/javascript" src="/assets/jquery-3.3.1.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+    });
+
+    function Validar(){
+    	var Control=true;
+    	if ($("#Iddocumento").val()=="") {
+			Control=false;
+    	}
+    	if ($("#IdNombre").val()=="") {
+    		Control=false;
+    	}
+    	if ($("#IdValor").val()=="") {
+    		Control=false;
+    	}
+    	return Control;
+    }
+
+   function Click(){
+			if(Validar()){
+				Grabar();
+				alert("Clck grabar");
+			}else{
+				alert("Debe diligenciar todos los campos");
+			}
+    }
+
+    function Grabar(){
+
+    			  var Documento =$("#Iddocumento").val();
+                  var Valor =$("#IdValor").val();
+                  var PCobrador ="garync@gmail.com";
+
+                  var url ="http://localhost:3000/api/pagos"
+				  $.ajax({
+	    		    url: url,
+	        		type: "GET",
+	        		crossDomain: true,
+	        		async: true,
+	        		data: {pdocumento:  Documento,  pidcobrador: PCobrador, pvalor: Valor} ,
+	        		cache:false,
+	        		dataType: 'json',
+	        		success: function (data) {
+	        			    if (data.clientes.length>0){
+	        			    	 $.each(data.clientes, function(index,element) {
+	        			    		alert("Se grabo correctamente ");
+	        			    	});
+	        			    }else{
+	        			    	alert("Cliente no existe ");
+	        			    }
+              		},
+	        		error: function (data) {
+	           			alert("Error"+data.responseText);
+	        		},
+	   			 });
+
+
+    }
+
+    function Buscar(){
+    	    var Documento = $("#Iddocumento").val();
+    		var url ="http://localhost:3000/api/cliente/"
+				  $.ajax({
+	    		    url: url,
+	        		type: "GET",
+	        		crossDomain: true,
+	        		async: true,
+	        		data: {pdocumento:Documento} ,
+	        		cache:false,
+	        		dataType: 'json',
+	        		success: function (data) {
+	        			    if (data.clientes.length>0){
+	        			    	 $.each(data.clientes, function(index,element) {
+	        			    		$("#IdNombre").val(element.nombres+" "+element.apellidos );
+	        			    	});
+	        			    }else{
+	        			    	alert("Cliente no existe ");
+	        			    }
+
+	            		
+
+	        		},
+	        		error: function (data) {
+	           			alert("Error"+data.responseText);
+	        		},
+	   			 });
+    }
+    function Clear(){
+    	$("#IdNombre").val("");
+    }
+
+</script>
+</head>
+<body>
+
+
+<h1>Aplicar Pagos del Cliente </h1>
+<h3>Documento de Identidad:</h3>
+<input type="text" id="Iddocumento" onkeypress="Clear();">
+<input type="button" id="Idbuscar" value="Buscar" onclick="Buscar();"  >
+<h3>Nombre:</h3>
+<input type="text" id="IdNombre">
+
+<h3>Valor a Pagar:</h3>
+<input type="text" id="IdValor">
+<h3></h3>
+<input type="Button" id="Grabar" onclick="Click();" value="Grabar">
+<input type="Button" id="Cancelar" onclick="" value="Cancelar">
+
+<p>Find me in app/views/pagos/create.html.erb</p>
+</body>
+</html>
+
+
+
+

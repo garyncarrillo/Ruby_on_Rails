@@ -1,0 +1,2 @@
+class Tcuotum < ApplicationRecord
+end

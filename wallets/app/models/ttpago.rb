@@ -1,0 +1,2 @@
+class Ttpago < ApplicationRecord
+end

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idcobrador:</strong>
+  <%= @tcobrador.idcobrador %>
+</p>
+
+<p>
+  <strong>Clave:</strong>
+  <%= @tcobrador.clave %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @tcobrador.correo %>
+</p>
+
+<p>
+  <strong>Celular:</strong>
+  <%= @tcobrador.celular %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @tcobrador.direccion %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @tcobrador.estado %>
+</p>
+
+<%= link_to 'Editar', edit_tcobrador_path(@tcobrador) %> |
+<%= link_to 'Atras', tcobradors_path %>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<script type="text/javascript" src="/assets/jquery-3.3.1.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	    $( "#FechaF" ).datepicker({ dateFormat: 'yymmdd' });
+		Cargar();
+	
+		function Cargar(){
+			getInformacion_Id_Cobrador();
+	
+		}
+		function getInformacion_Id_Cobrador(){
+		          var url ="http://localhost:3000/api/cobradores"
+		          var Nueva="";
+				  $.ajax({
+	    		    url: url,
+	        		type: "GET",
+	        		crossDomain: true,
+	        		async: true,
+	        		cache:false,
+	        		dataType: 'json',
+	        		success: function (data) {
+	        			     $.each(data.clientes, function(index,element) {
+                    			Nueva = Nueva +"<option value="+element.correo+">"+element.correo+"</option>";
+                    		});
+	            			$("#idcobrador").append(Nueva);
+
+	        		},
+	        		error: function (data) {
+	           			alert("Error"+data.responseText);
+	        		},
+	   			 });
+		}
+    });
+
+    function Validar(){
+    	var Control=true;
+    	if ($("#idcobrador").val()=="") {
+			Control=false;
+    	}
+    	if ($("#FechaF").val()=="") {
+    		Control=false;
+    	}
+  
+    	return Control;
+    }
+
+   function Click(){
+			if(Validar()){
+			   
+				Consultar();
+				//alert("Clck grabar");
+				     var Cab="<tr>";
+                     Cab=Cab+"<td><strong>Nro Credito</strong></td>";
+                     Cab=Cab+"<td><strong>Numero de pago</strong></td>";
+                     Cab=Cab+"<td><strong>Valor pagado</strong></td>";
+                     Cab=Cab+"<td><strong>Cobrador</strong></td>";	
+				     Cab=Cab+"</tr>";
+				     $("#Tabla").append(Cab);
+
+
+			}else{
+				alert("Debe diligenciar todos los campos");
+			}
+    }
+
+    function Consultar(){
+
+    			  var Cobrador =$("#idcobrador").val();
+                  var Fecha =$("#FechaF").val();
+     		      var url ="http://localhost:3000/api/my_pagos/"
+				  $.ajax({
+	    		    url: url,
+	        		type: "GET",
+	        		crossDomain: true,
+	        		async: true,
+	        		data: {pidcobrador:  Cobrador,  pfecha: Fecha} ,
+	        		cache:false,
+	        		dataType: 'json',
+	        		success: function (data) {
+	        			    if (data.Cobrador.length>0){
+	        			    	 $.each(data.Cobrador, function(index,element) {
+	        			    		  var Cab="<tr>";
+                    				    Cab=Cab+"<td>"+element.idcredito+"</td>";
+                     				    Cab=Cab+"<td>"+element.numero_pago+"</td>";
+                    				    Cab=Cab+"<td>"+element.valor_recaudado+"</td>";
+                                        Cab=Cab+"<td>"+element.idcobrador+"</td>";	
+				                        Cab=Cab+"</tr>";
+				                        $("#Tabla").append(Cab);
+	        			    	});
+	        			    }else{
+	        			    	alert("Cliente no existe ");
+	        			    }
+              		},
+	        		error: function (data) {
+	           			alert("Error"+data.responseText);
+	        		},
+	   			 });
+
+
+    }
+
+    function Buscar(){
+    	    var Documento = $("#Iddocumento").val();
+    		var url ="http://localhost:3000/api/cliente/"
+				  $.ajax({
+	    		    url: url,
+	        		type: "GET",
+	        		crossDomain: true,
+	        		async: true,
+	        		data: {pdocumento:Documento} ,
+	        		cache:false,
+	        		dataType: 'json',
+	        		success: function (data) {
+	        			    if (data.clientes.length>0){
+	        			    	 $.each(data.clientes, function(index,element) {
+	        			    		$("#IdNombre").val(element.nombres+" "+element.apellidos );
+	        			    	});
+	        			    }else{
+	        			    	alert("Cliente no existe ");
+	        			    }
+
+	            		
+
+	        		},
+	        		error: function (data) {
+	           			alert("Error"+data.responseText);
+	        		},
+	   			 });
+    }
+    function Clear(){
+    	$("#IdNombre").val("");
+    }
+
+</script>
+</head>
+<body>
+
+
+<h1>Aplicar Pagos del Cliente </h1>
+
+
+<h3>Cobrador:</h3>
+<select id="idcobrador">
+</select>
+
+<h3>Fecha de pago:</h3>
+<input type="text" id="FechaF">
+<h3></h3>
+<input type="Button" id="Consultar" onclick="Click();" value="Consultar">
+<br></br>
+<table id="Tabla">
+</table>
+<p>Find me in app/views/pagos/show_cobrador.html.erb</p>
+</body>
+</html>
+
+
+
+
+

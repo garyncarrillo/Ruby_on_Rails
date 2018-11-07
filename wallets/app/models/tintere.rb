@@ -1,0 +1,2 @@
+class Tintere < ApplicationRecord
+end

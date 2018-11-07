@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<script type="text/javascript" src="/assets/jquery-3.3.1.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$( "#FechaI" ).datepicker({ dateFormat: 'yymmdd' });
+		$( "#FechaF" ).datepicker({ dateFormat: 'yymmdd' });
+		Cargar();
+	
+		function Cargar(){
+			getInformacion_Tipo();
+			getInformacion_Interes();
+		}
+		function getInformacion_Tipo(){
+		          var url ="http://localhost:3000/api/show_Tipos_Cuotas"
+		          var Nueva="";
+				  $.ajax({
+	    		    url: url,
+	        		type: "GET",
+	        		crossDomain: true,
+	        		async: true,
+	        		cache:false,
+	        		dataType: 'json',
+	        		success: function (data) {
+	        			     $.each(data.clientes, function(index,element) {
+                    			Nueva = Nueva +"<option value="+element.idcuota+">"+element.idcuota+"</option>";
+                    		});
+	            			$("#IdTipo").append(Nueva);
+
+	        		},
+	        		error: function (data) {
+	           			alert("Error"+data.responseText);
+	        		},
+	   			 });
+		}
+
+		function getInformacion_Interes(){
+		          var url ="http://localhost:3000/api/show_Tipos_Interes"
+		          var Nueva="";
+				  $.ajax({
+	    		    url: url,
+	        		type: "GET",
+	        		crossDomain: true,
+	        		async: true,
+	        		cache:false,
+	        		dataType: 'json',
+	        		success: function (data) {
+	        			     $.each(data.clientes, function(index,element) {
+                    			Nueva = Nueva +"<option value="+element.idinteres+">"+element.idinteres+"</option>";
+                    		});
+	            			$("#IdInteres").append(Nueva);
+
+	        		},
+	        		error: function (data) {
+	           			alert("Error"+data.responseText);
+	        		},
+	   			 });
+		}
+
+    });
+
+    function Validar(){
+    	var Control=true;
+    	if ($("#Iddocumento").val()=="") {
+			Control=false;
+    	}
+    	if ($("#IdNombre").val()=="") {
+    		Control=false;
+    	}
+    	if ($("#IdInteres").val()=="") {
+    		Control=false;
+    	}
+    	if ($("#IdCuotas").val()=="") {
+    		Control=false;
+    	}
+    	 if ($("#IdTipo").val()=="") {
+    		Control=false;
+    	}
+    	if ($("#Valor_Prestamo").val()=="") {
+    		Control=false;
+    	}
+    	if ($("#FechaI").val()=="") {
+    		Control=false;
+    	}
+    	if ($("#FechaF").val()=="") {
+    		Control=false;
+    	}
+    	return Control;
+    }
+
+   function Click(){
+			if(Validar()){
+				Grabar();
+				alert("Clck grabar");
+			}else{
+				alert("Debe diligenciar todos los campos");
+			}
+    }
+
+    function Grabar(){
+
+    			  var Documento =$("#Iddocumento").val();
+    			  var Interes   =$("#IdInteres").val();
+    			  var Cuota     =$("#IdCuotas").val();
+    			  var Tipo      =$("#IdTipo").val();
+                  var Valor =$("#Valor_Prestamo").val();
+                  var FechaI    =$("#FechaI").val();
+                  var FechaF    =$("#FechaF").val();
+                  var PUsuario ="garync@gmail.com";
+
+                  var url ="http://localhost:3000/api/c_credito/"
+				  $.ajax({
+	    		    url: url,
+	        		type: "GET",
+	        		crossDomain: true,
+	        		async: true,
+	        		data: {pdocumento:  Documento, nro_cuotas: Cuota, Tipo_pagos: Tipo, Interes: Interes, Valor_p: Valor  , Fecha_ini: FechaI , Fecha_fin: FechaF, Usuario: PUsuario} ,
+	        		cache:false,
+	        		dataType: 'json',
+	        		success: function (data) {
+	        			    if (data.clientes.length>0){
+	        			    	 $.each(data.clientes, function(index,element) {
+	        			    		alert("Se grabo correctamente ");
+	        			    	});
+	        			    }else{
+	        			    	alert("Cliente no existe ");
+	        			    }
+
+	            		
+
+	        		},
+	        		error: function (data) {
+	           			alert("Error"+data.responseText);
+	        		},
+	   			 });
+
+
+    }
+
+    function Buscar(){
+    	    var Documento = $("#Iddocumento").val();
+    		var url ="http://localhost:3000/api/cliente/"
+				  $.ajax({
+	    		    url: url,
+	        		type: "GET",
+	        		crossDomain: true,
+	        		async: true,
+	        		data: {pdocumento:Documento} ,
+	        		cache:false,
+	        		dataType: 'json',
+	        		success: function (data) {
+	        			    if (data.clientes.length>0){
+	        			    	 $.each(data.clientes, function(index,element) {
+	        			    		$("#IdNombre").val(element.nombres+" "+element.apellidos );
+	        			    	});
+	        			    }else{
+	        			    	alert("Cliente no existe ");
+	        			    }
+
+	            		
+
+	        		},
+	        		error: function (data) {
+	           			alert("Error"+data.responseText);
+	        		},
+	   			 });
+    }
+    function Clear(){
+    	$("#IdNombre").val("");
+    }
+
+</script>
+</head>
+<body>
+
+
+<h1>Crear credito</h1>
+<h3>Documento de Identidad:</h3>
+<input type="text" id="Iddocumento" onkeypress="Clear();">
+<input type="button" id="Idbuscar" value="Buscar" onclick="Buscar();"  >
+<h3>Nombre:</h3>
+<input type="text" id="IdNombre">
+<h3>Tipo de Cobro:</h3>
+<select id="IdTipo">
+</select>
+<h3>Intereses:</h3>
+<select id="IdInteres">
+</select>
+<h3>Numero de Cuotas:</h3>
+<input type="text" id="IdCuotas">
+<h3>Valor del Prestamo:</h3>
+<input type="text" id="Valor_Prestamo">
+<h3>Fecha Inicio:</h3>
+<input type="text" id="FechaI">
+<h3>Fecha Final:</h3>
+<input type="text" id="FechaF">
+<br></br>
+<input type="Button" id="Grabar" onclick="Click();" value="Grabar">
+<input type="Button" id="Cancelar" onclick="" value="Cancelar">
+
+<p>Find me in app/views/credito/create.html.erb</p>
+</body>
+</html>

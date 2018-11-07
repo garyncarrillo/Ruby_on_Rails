@@ -1,0 +1,47 @@
+<%= form_with(model: tcobrador, local: true) do |form| %>
+  <% if tcobrador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tcobrador.errors.count, "error") %> prohibited this tcobrador from being saved:</h2>
+
+      <ul>
+      <% tcobrador.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idcobrador %>
+    <%= form.text_field :idcobrador, id: :tcobrador_idcobrador %>
+  </div>
+
+  <div class="field">
+    <%= form.label :clave %>
+    <%= form.text_field :clave, id: :tcobrador_clave %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correo %>
+    <%= form.text_field :correo, id: :tcobrador_correo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :celular %>
+    <%= form.text_field :celular, id: :tcobrador_celular %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion, id: :tcobrador_direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado %>
+    <%= form.text_field :estado, id: :tcobrador_estado %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

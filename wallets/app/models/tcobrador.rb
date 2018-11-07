@@ -1,0 +1,2 @@
+class Tcobrador < ApplicationRecord
+end

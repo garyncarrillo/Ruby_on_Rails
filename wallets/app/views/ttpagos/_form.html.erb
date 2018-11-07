@@ -1,0 +1,27 @@
+<%= form_with(model: ttpago, local: true) do |form| %>
+  <% if ttpago.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ttpago.errors.count, "error") %> prohibited this ttpago from being saved:</h2>
+
+      <ul>
+      <% ttpago.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idpago %>
+    <%= form.text_field :idpago, id: :ttpago_idpago %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, id: :ttpago_descripcion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

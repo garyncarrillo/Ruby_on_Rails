@@ -1,0 +1,112 @@
+<%= form_with(model: twallets_c, local: true) do |form| %>
+  <% if twallets_c.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(twallets_c.errors.count, "error") %> prohibited this twallets_c from being saved:</h2>
+
+      <ul>
+      <% twallets_c.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idcredito %>
+    <%= form.text_field :idcredito, id: :twallets_c_idcredito %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idcliente %>
+    <%= form.text_field :idcliente, id: :twallets_c_idcliente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idcuota %>
+    <%= form.text_field :idcuota, id: :twallets_c_idcuota %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idpago %>
+    <%= form.text_field :idpago, id: :twallets_c_idpago %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idinteres %>
+    <%= form.text_field :idinteres, id: :twallets_c_idinteres %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idinteres_mora %>
+    <%= form.text_field :idinteres_mora, id: :twallets_c_idinteres_mora %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor_capital %>
+    <%= form.text_field :valor_capital, id: :twallets_c_valor_capital %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor_interes %>
+    <%= form.text_field :valor_interes, id: :twallets_c_valor_interes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor_mora %>
+    <%= form.text_field :valor_mora, id: :twallets_c_valor_mora %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor_capital_pagado %>
+    <%= form.text_field :valor_capital_pagado, id: :twallets_c_valor_capital_pagado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor_interes_pagado %>
+    <%= form.text_field :valor_interes_pagado, id: :twallets_c_valor_interes_pagado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor_interes_mora_pagado %>
+    <%= form.text_field :valor_interes_mora_pagado, id: :twallets_c_valor_interes_mora_pagado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero_cuota %>
+    <%= form.text_field :numero_cuota, id: :twallets_c_numero_cuota %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero_cuota_pendiente %>
+    <%= form.text_field :numero_cuota_pendiente, id: :twallets_c_numero_cuota_pendiente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechainicio %>
+    <%= form.text_field :fechainicio, id: :twallets_c_fechainicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechafin %>
+    <%= form.text_field :fechafin, id: :twallets_c_fechafin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecgrab %>
+    <%= form.text_field :fecgrab, id: :twallets_c_fecgrab %>
+  </div>
+
+  <div class="field">
+    <%= form.label :usergrab %>
+    <%= form.text_field :usergrab, id: :twallets_c_usergrab %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado %>
+    <%= form.text_field :estado, id: :twallets_c_estado %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

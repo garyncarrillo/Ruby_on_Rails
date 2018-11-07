@@ -1,0 +1,2 @@
+class Tcliente < ApplicationRecord
+end

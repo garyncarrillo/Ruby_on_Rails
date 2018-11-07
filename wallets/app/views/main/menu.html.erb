@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Pushy - Off-Canvas Navigation Menu</title>
+        <meta name="description" content="Pushy is an off-canvas navigation menu for your website.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="/assets/normalize.css">
+        <link rel="stylesheet" href="/assets/demo.css">
+        <!-- Pushy CSS -->
+        <link rel="stylesheet" href="/assets/pushy.css">
+
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        
+        <!-- jQuery -->
+        <script type="text/javascript" src="/assets/jquery-3.3.1.js"></script>
+
+        <script type="text/javascript">
+       
+				$(document).ready(function(){
+                      
+						$( "#Credito-crear" ).click(function() {	
+							$('#frame').attr('src','http://localhost:3000/credito/create');	
+						});
+						$( "#Credito-consultar" ).click(function() {
+							$('#frame').attr('src','http://localhost:3000/credito/show');
+						});
+						$( "#Credito-eliminar" ).click(function() {
+							alert("Eliminar");
+						});
+  	  					
+  	  					$( "#Pagos-crear" ).click(function() {	
+							$('#frame').attr('src','http://localhost:3000/pagos/create');	
+						});
+  	  					$( "#Pagos-consulta" ).click(function() {
+							$('#frame').attr('src','http://localhost:3000/twalles_ds/');
+						});
+                         $( "#Clientes-crear" ).click(function() {  
+                            $('#frame').attr('src','http://localhost:3000/tclientes/new');  
+                        });
+                        $( "#Clientes-consulta" ).click(function() {
+                            $('#frame').attr('src','http://localhost:3000/tclientes/');
+                        });
+                        $( "#Cobrador-crear" ).click(function() {
+                            $('#frame').attr('src','http://localhost:3000/tcobradors/');
+                        });
+                         $( "#Cobrador-crear" ).click(function() {
+                            $('#frame').attr('src','http://localhost:3000/tcobradors/');
+                        });
+                        $( "#Cuotas-crear" ).click(function() { 
+                            $('#frame').attr('src','http://localhost:3000/tcuota/');  
+                        });
+                        $( "#Intereses-crear" ).click(function() { 
+                            $('#frame').attr('src','http://localhost:3000/tinteres/');  
+                        });
+                      
+                          $( "#Venta-cobrador" ).click(function() { 
+                            $('#frame').attr('src','http://localhost:3000/pagos/show_cobrador');  
+                        });
+
+                    
+
+				});
+
+			
+
+		</script>
+
+    </head>
+    <body>
+
+        <header class="site-header push">Administracion de Cartera</header>
+
+        <!-- Pushy Menu -->
+        <!--  <nav class="pushy pushy-left" data-focus="#first-link"> -->
+        <nav class="pushy pushy-left" >
+            <div class="pushy-content">
+                <ul>
+                    <li class="pushy-link"><a></a></li>
+                    <li class="pushy-link"><a href="http://localhost:3000/main/menu">Home</a></li>
+                    <li class="pushy-submenu">
+                        <button>Creditos  </button>
+                        <ul>
+                            <li name="Credito-crear" id="Credito-crear" class="pushy-link"><a>Crear</a></li>
+                            <li name="Credito-consultar" id="Credito-consultar" class="pushy-link"><a>Consultar</a></li>
+                            <li name="Credito-eliminar" id="Credito-eliminar" class="pushy-link"><a>Eliminar</a></li>
+                        </ul>
+                    </li>
+                    <li class="pushy-submenu">
+                        <button>Pagos  </button>
+                        <ul>
+                            <li class="pushy-link" id="Pagos-crear"><a>Crear</a></li>
+                            <li class="pushy-link" id="Pagos-consulta"><a>Consultar</a></li>
+                        </ul>
+                    </li>
+                     <li class="pushy-submenu">
+                        <button>Clientes  </button>
+                        <ul>
+                            <li class="pushy-link" id="Clientes-crear"><a>Crear</a></li>
+                            <li class="pushy-link" id="Clientes-consulta"><a>Consultar</a></li>
+                        </ul>
+                    </li>
+                      <li class="pushy-submenu">
+                        <button>Parametros</button>
+                        <ul>
+                            <li class="pushy-link" id="Cobrador-crear"><a>Usuarios</a></li>
+                            <li class="pushy-link" id="Cuotas-crear"><a>Tipo de Cuotas</a></li>
+                            <li class="pushy-link" id="Intereses-crear"><a>Tipo de Intereses</a></li>
+                    
+                        </ul>
+                    </li>
+                      <li class="pushy-submenu">
+                        <button>Informes </button>
+                        <ul>
+                            <li class="pushy-link" id="Venta-cobrador"><a>Ventas por Cobrador</a></li>
+                            <li class="pushy-link" id="Reportes-crear"><a>Ventas por Fecha</a></li>
+                            <li class="pushy-link" id="Reportes-crear"><a>Credito por Clientes</a></li>
+                            <li class="pushy-link" id="Reportes-crear"><a>Pagos por Clientes</a></li>
+                        </ul>
+                    </li>
+                    <li class="pushy-link"><a>Ayuda</a></li>
+            
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Site Overlay -->
+        <div class="site-overlay"></div>
+
+        <!-- Your Content -->
+        <div id="container" style="height:100%">
+            <!-- Menu Button -->
+            <button class="menu-btn">&#9776; Menu</button>
+            <div id="item">
+               <iframe id="frame" name="frame"  height="630" width="900"  frameborder="0"></iframe>	
+            </div>
+   
+        </div>
+
+       
+
+        <!-- Pushy JS -->
+        <script src="/assets/pushy.min.js"></script>
+
+    </body>
+</html>

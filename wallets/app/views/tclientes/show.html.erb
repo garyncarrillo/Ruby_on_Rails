@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Documento Identidad:</strong>
+  <%= @tcliente.idcliente %>
+</p>
+
+<p>
+  <strong>Nombres:</strong>
+  <%= @tcliente.nombres %>
+</p>
+
+<p>
+  <strong>Apellidos:</strong>
+  <%= @tcliente.apellidos %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @tcliente.direccion %>
+</p>
+
+<p>
+  <strong>Celular:</strong>
+  <%= @tcliente.celular %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @tcliente.correo %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @tcliente.estado %>
+</p>
+
+<p>
+  <strong>Fecha Grabacion:</strong>
+  <%= @tcliente.fecgrab %>
+</p>
+
+<p>
+  <strong>Usuario de Grabacion:</strong>
+  <%= @tcliente.usergrab %>
+</p>
+
+<%= link_to 'Edit', edit_tcliente_path(@tcliente) %> |
+<%= link_to 'Back', tclientes_path %>

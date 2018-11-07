@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idcredito: MyString
+  idcliente: MyString
+  idcuota: MyString
+  idpago: MyString
+  idinteres: MyString
+  idinteres_mora: MyString
+  valor_capital: 
+  valor_interes: 
+  valor_mora: 
+  valor_capital_pagado: 
+  valor_interes_pagado: 
+  valor_interes_mora_pagado: 
+  numero_cuota: 
+  numero_cuota_pendiente: 
+  fechainicio: MyString
+  fechafin: MyString
+  fecgrab: MyString
+  usergrab: MyString
+  estado: MyString
+
+two:
+  idcredito: MyString
+  idcliente: MyString
+  idcuota: MyString
+  idpago: MyString
+  idinteres: MyString
+  idinteres_mora: MyString
+  valor_capital: 
+  valor_interes: 
+  valor_mora: 
+  valor_capital_pagado: 
+  valor_interes_pagado: 
+  valor_interes_mora_pagado: 
+  numero_cuota: 
+  numero_cuota_pendiente: 
+  fechainicio: MyString
+  fechafin: MyString
+  fecgrab: MyString
+  usergrab: MyString
+  estado: MyString

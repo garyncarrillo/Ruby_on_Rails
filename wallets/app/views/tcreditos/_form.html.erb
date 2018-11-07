@@ -1,0 +1,37 @@
+<%= form_with(model: tcredito, local: true) do |form| %>
+  <% if tcredito.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tcredito.errors.count, "error") %> prohibited this tcredito from being saved:</h2>
+
+      <ul>
+      <% tcredito.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idcredito %>
+    <%= form.text_field :idcredito, id: :tcredito_idcredito %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor %>
+    <%= form.text_field :valor, id: :tcredito_valor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, id: :tcredito_descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado %>
+    <%= form.text_field :estado, id: :tcredito_estado %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

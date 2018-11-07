@@ -1,0 +1,2 @@
+class TwalletsC < ApplicationRecord
+end
