@@ -1,0 +1,63 @@
+
+@font-face {
+    font-family: 'arimo-bold';
+    src: url('../fonts/arimo/arimo-bold-webfont.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'arimo';
+    src: url('../fonts/arimo/arimo-regular-webfont.woff') format('woff');
+}
+
+.main-container{
+	margin: 50px auto;
+	margin-left: %;
+
+}
+
+.main-container table thead tr th{
+	   font-family: 'arimo-bold';
+	    font-size: 13px;	
+}
+
+.main-container table tbody tr td{
+	   font-family: 'arimo';
+	   font-size: 12px;	
+}
+
+
+/* https://elvery.net/demo/responsive-tables/ */
+/* @media only screen and (max-width: 780px) { */
+@media only screen and (max-width: 800px) {
+	.turnover tr td:nth-child(2){ 
+		display:none; 
+		visibility:hidden;
+	}
+	.turnover table tr:first-child td:nth-child(1){display: none;}
+}
+ 
+@media only screen and (max-width: 640px) {
+	.turnover tr td:nth-child(2){ 
+		display:none; 
+		visibility:hidden;
+	}
+	#unseen table tr:first-child td:nth-child(1){display: none;}	
+
+}
+
+
+h2 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+table caption {
+	padding: .5em 0;
+}
+
+.p {
+  text-align: center;
+  padding-top: 140px;
+  font-size: 14px;
+}
