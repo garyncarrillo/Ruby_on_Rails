@@ -1,0 +1,100 @@
+
+@font-face {
+    font-family: 'arimo-bold';
+    src: url('../fonts/arimo/arimo-bold-webfont.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'arimo';
+    src: url('../fonts/arimo/arimo-regular-webfont.woff') format('woff');
+}
+.separador{
+
+	width: 60%;
+	height: 200px;
+
+}
+
+.Producto{
+	position: absolute;
+	left: 2%;
+	top: 5%;
+	/* float: left; */
+	width: 40%;
+	height: 30%;
+	border:1px solid  #00448C;
+}
+
+
+.Creditos{
+	position: absolute;
+	left: 2%;
+	top: 50%;
+	/* float: left; */
+	width: 40%;
+	height: 30%;
+	border:1px solid  #00448C;
+}
+
+.Movimientos{
+
+}
+
+
+header{
+	width: 100;
+	height: 10;
+
+
+}
+
+.menu ul {
+
+	background: #788FB9; 
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	/* posicion del menu de forma horizontal*/
+	flex-direction: row;
+
+	/* para centrar el texto sobre la barra
+	justify-content: center; */
+	/*border:1px solid  #00448C;*/
+}
+
+
+.menu ul li a {
+	font-family: 'arimo-bold';	
+	margin-left: 10px;
+	color: #fff;
+	font-size: 14px;
+}
+
+.cab ul {
+
+	background: #D2D9E8;
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	/* posicion del menu de forma horizontal*/
+	flex-direction: row;
+
+	/* para centrar el texto sobre la barra
+	justify-content: center; */
+
+}
+.cab li {
+
+	/* distribuye de forma equitativa*/
+	flex-grow: 1;
+}
+
+.cab ul li a {
+    font-family: 'arimo';	
+	margin-left: 10px;
+	color: black;
+	font-size: 14px;
+}

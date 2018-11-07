@@ -1,0 +1,244 @@
+
+@font-face {
+    font-family: 'arimo';
+    src: url('../fonts/arimo/arimo-regular-webfont.woff') format('woff');
+}
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+	font-size: 80%;
+}
+
+header{
+	width: 100;
+	background: #00448C;
+}
+
+
+#btn-menu {
+	/* desaparecer el check del menu*/
+	display: none;
+}
+
+header label {
+	/* desaparecer el check del menu*/
+	display: none;
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+	/* linea derecha blanca del menu*/
+	border-right: 1px  solid #fff;
+}
+
+/* Movimiento del Mouse CSS */
+header label:hover {
+	cursor: pointer;
+    /* Efecto sombreado sobre el menu */
+    background: rgba( 0,0,0,0.3);
+}
+
+
+.menu ul {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	/* convertir en caja flexible y de e forma horizontal*/
+	display: flex;
+	/* posicion del menu de forma horizontal*/
+	flex-direction: row;
+
+	/* para centrar el texto sobre la barra
+	justify-content: center; */
+}
+
+.menu li{
+	/*text-align: center;*/
+
+	/* centrar texto 
+	flex-grow: 1; */
+}
+
+.menu li:hover{
+	cursor: pointer;
+	/* Efecto sombreado sobre el menu */
+    background: rgba( 0,0,0,0.3);
+}
+
+.menu li a{
+	font-family: 'arimo';	
+	display: block;
+	/* separacion vertical y horizontal de menu */
+	padding: 10px 20px;
+	color: #fff;
+	/*quita la linea de link del texto*/
+	text-decoration: none;
+}
+
+
+.menu a {
+	display: block;
+	padding:  15px 20px;
+	color: #fff;
+}
+
+.menu ul ul {
+	display: none;
+}
+.menu ul li:hover ul{
+   display: block;
+   background: #00448C;
+   position: absolute;
+}
+
+.menu ul ul a{
+	padding: 15px 40px;
+}
+
+
+.sub-li {
+	background: #788FB9;
+}
+
+.cabecera ul{
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end; 
+}
+.cabecera li a {
+	display: block;
+	padding:  15px 20px;
+}
+
+.sucursal{
+	font-size: 18px;
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	height: 50px;
+	color: #788FB9;
+}
+
+.afiliado ul{
+	margin: 0;
+	font-size: 15px;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end; 
+	color: rgba( 0,0,0,0.4);
+}
+
+.actualizar{
+	margin: 0;
+	font-size: 10px;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end; 
+	color: #00448C;
+}
+
+
+
+
+
+#cmenu-actualizar{
+	display: none;
+}
+
+
+/* cuando le de click */
+#cmenu-actualizar:checked ~  .menu-actualizar {
+		margin: 0;
+		display: block;
+}
+
+.cab label{
+	border-right: 1px  solid #fff;
+}
+
+.menu-actualizar {
+	    display: none;
+		background: #fff;
+		width: 70%;
+		margin-left: -100%;
+		/* efecto de velocidad para recogida del menu*/
+		transition: all 0.1s;
+		border: 1px;
+
+}
+
+.menu-actualizar li:hover{
+	cursor: pointer;
+}
+.menu-actualizar ul{
+		flex-direction: column;
+		margin: 0;
+		list-style: none;
+		padding: 5px 12px;
+		justify-content: flex-end; 
+
+}
+.menu-actualizar li{
+		border-top: 1px solid #fff;
+
+}
+
+
+.Div-principal{
+	margin-left: 50px;
+	margin-right: 50px;
+
+}
+
+
+
+
+
+
+
+/* https://www.youtube.com/watch?v=FL_odxf4zq4 */
+/* media query*/
+
+
+@media (max-width: 768px){
+	header label {
+		display:  block;
+	}
+
+	.menu {
+		/*con el posicion absolute para que se salga el menu web*/
+		position: absolute;
+		background: #00448C;
+		width: 70%;
+		margin-left: -100%;
+		/* efecto de velocidad para recogida del menu*/
+		transition: all 0.1s;
+	}
+
+	.menu ul{
+		/* cambio a columna el menu*/
+		flex-direction: column;
+	}
+
+	.menu li{
+		/* Linea superior sobre el menu */
+		border-top: 1px solid #fff;
+	}
+
+	.menu ul li:hover ul{
+		display: none;
+		position: static;
+	}
+
+	/* cuando le de click */
+	#btn-menu:checked ~  .menu {
+		margin: 0;
+	}
+}
+
+
+

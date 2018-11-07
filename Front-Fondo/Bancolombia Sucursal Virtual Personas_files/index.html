@@ -1,0 +1,2526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0089)https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#header0 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>Sucursal Virtual Cootracom</title>
+        
+		
+		<meta content="es" http-equiv="Content-Language">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Todo1">
+		<meta name="author" content="Todo1 Services">
+		<meta name="Copyright" content="(c) 2014  Todo1 Services. All rights reserved.">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+		
+
+		
+		
+
+
+
+
+	<script type="text/javascript" src="./017cf77fef(1)"></script><script src="./nr-1071.min.js"></script><script type="text/javascript" src="./jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="./jquery-ui.min.js"></script>
+	<script type="text/javascript" src="./jquery.ui.datepicker-es.min.js"></script>
+	<script type="text/javascript" src="./jquery.form.min.js"></script>
+  <script type="text/javascript" src="./jquery.subscribe.min.js"></script>
+
+  <script type="text/javascript" src="./jquery.struts2-3.3.0.min.js"></script>
+
+<script type="text/javascript">
+$(function() {
+	jQuery.struts2_jquery.version="3.3.0";
+	jQuery.struts2_jquery.loadAtOnce = true;
+  	jQuery.scriptPath = "/cb/struts/";
+  jQuery.struts2_jquery.local = "es";
+  jQuery.struts2_jquery.gridLocal = "es";
+  jQuery.struts2_jquery.timeLocal = "es";
+	jQuery.struts2_jquery.defaults.indicator="indicator";
+	jQuery.ajaxSettings.traditional = true;
+
+	jQuery.ajaxSetup ({
+		cache: false
+	});
+	
+	jQuery.struts2_jquery.require("js/struts2/jquery.ui.struts2-3.3.0.min.js");
+	
+});
+</script>
+
+        	<link id="jquery_theme_link" rel="stylesheet" href="./jquery-ui(1).css" type="text/css">
+
+		
+		
+
+
+
+        <link type="text/css" rel="stylesheet" media="all" href="./bootstrap-theme.css">
+		<link type="text/css" rel="stylesheet" media="all" href="./Bancolombia.css">
+		<link type="text/css" rel="stylesheet" media="all" href="./FF.css">
+		<link type="text/css" rel="stylesheet" media="all" href="./showLoadingBank(1).css">		
+		
+		 <!--[if IE 8]>
+			 <link type="text/css" rel="stylesheet" media="all" href="/cb/web/css/cssPatch/Bancolombia/ui-patch-ie8.css?version=1.9.2.RC1" />
+			 <link href="/web/css/bootstrap-ie7.css?version=%{#session.projectVersion}" rel="stylesheet">
+		 <![endif]-->
+		<!--[if !IE 8]><!-->				
+		<link type="text/css" rel="stylesheet" media="all" href="./ui-patch.css">	
+		<!--<![endif]-->	
+
+		<link type="text/css" rel="stylesheet" media="all" href="./bootstrap.css">
+		<link type="text/css" rel="stylesheet" media="all" href="./jquery-ui.min.css">
+		<link type="text/css" rel="stylesheet" media="all" href="./styles.css">
+		<link type="text/css" rel="stylesheet" media="all" href="./landing-styles.css">
+		<link type="text/css" rel="stylesheet" media="all" href="./styles2.css">
+		
+		<link type="text/css" rel="stylesheet" media="all" href="./style_bancolombia_rx.css">
+
+		
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js -->
+   <!-- WARNING: Respond.js doesn't work if you view the page via file:// https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js-->
+   <!--[if lt IE 9]>
+      <script src="/web/js/Bancolombia/html5shiv.js"></script>
+      <script src="/web/js/Bancolombia/respond.min.js"></script>
+   <![endif]-->
+		
+	<!--script type="text/javascript" src="/cb/web/js/Bancolombia/jquery-1.10.1.js"></script-->
+	<script type="text/javascript" src="./jquery.validate-1.11.1.js"></script>
+	<script type="text/javascript" src="./blockKeys.js"></script>
+	<script type="text/javascript" src="./validations.js"></script>
+	<script type="text/javascript" src="./jquery-validations.js"></script>
+	<script type="text/javascript" src="./bootstrap.js"></script>
+	<script type="text/javascript" src="./todo1.extension.js"></script>
+	<script type="text/javascript" src="./customNickName.js"></script>
+		<script language="JavaScript">
+/** This is high-level function.
+ * It must react to delta being more/less than zero.
+ */
+function handle(delta) {
+        if (delta < 0)
+			return false;
+        else
+			return false;
+}
+
+/** Event handler for mouse wheel event.
+ */
+function wheel(event){
+        var delta = 0;
+        if (!event) /* For IE. */
+                event = window.event;
+        if (event.wheelDelta) { /* IE/Opera. */
+                delta = event.wheelDelta/120;
+                /** In Opera 9, delta differs in sign as compared to IE.
+                 */
+                if (window.opera)
+                        delta = -delta;
+        } else if (event.detail) { /** Mozilla case. */
+                /** In Mozilla, sign of delta is different than in IE.
+                 * Also, delta is multiple of 3.
+                 */
+                delta = -event.detail/3;
+        }
+        /** If delta is nonzero, handle it.
+         * Basically, delta is now positive if wheel was scrolled up,
+         * and negative, if wheel was scrolled down.
+         */
+        if (delta)
+                handle(delta);
+        /** Prevent default actions caused by mouse wheel.
+         * That might be ugly, but we handle scrolls somehow
+         * anyway, so don't bother here..
+         */
+        if (event.preventDefault)
+                event.preventDefault();
+	event.returnValue = false;
+}
+
+</script>
+
+<script language="JavaScript">
+
+$(document).ready(function() {
+	$('*').bind("cut copy paste", function(e) {
+		alert("Funcion no permitida");
+		return false;
+	});
+});
+
+document.onkeydown = mykeyhandler;
+
+function mykeyhandler(event) {
+
+	//keyCode 116 = F5 
+	//keyCode 122 = F11
+	//keyCode   8 = Backspace
+	//keyCode  37 = LEFT ROW
+	//keyCode  78 = N
+	//keyCode  39 = RIGHT ROW
+	//keyCode  67 = C
+	//keyCode  86 = V
+	//keyCode  85 = U	
+	//keyCode  45 = Insert
+
+	event = event || window.event;
+	var tgt = event.target || event.srcElement;
+	if((event.altKey && event.keyCode==37) || (event.altKey && event.keyCode==39) || 
+	   (event.ctrlKey && event.keyCode==78)|| (event.ctrlKey && event.keyCode==67)|| 
+	   (event.ctrlKey && event.keyCode==86)|| (event.ctrlKey && event.keyCode==85)||
+	   (event.ctrlKey && event.keyCode==45)|| (event.shiftKey && event.keyCode==45)){
+        event.cancelBubble = true;
+        event.returnValue = false;	
+		alert("Funcion no permitida");
+		return false;
+	}
+	
+	if(event.keyCode==18 && tgt.type != "text" && tgt.type != "password" && tgt.type != "textarea" && tgt.type != "application/x-shockwave-flash"){
+			return false;
+	}
+	
+	if (event.keyCode == 8 && tgt.type != "text" && tgt.type != "password" && tgt.type != "textarea" && tgt.type != "application/x-shockwave-flash" ){
+		return false;
+	}
+
+	if(event.ctrlKey && ( event.keyCode==107 || event.keyCode==109 )  ){
+		return false;
+	}
+	
+    if ((event.keyCode >= 112) && (event.keyCode <= 123)) {
+		if (navigator.appName == "Microsoft Internet Explorer"){
+			window.event.keyCode=0;
+        }
+        return false;
+    }
+}
+
+function mouseDown(e) {
+	var ctrlPressed=0;
+	var altPressed=0;
+	var shiftPressed=0;
+	if (parseInt(navigator.appVersion)>3) {
+		if (navigator.appName=="Netscape") {
+			var mString =(e.modifiers+32).toString(2).substring(3,6);
+			shiftPressed=(mString.charAt(0)=="1");
+			ctrlPressed =(mString.charAt(1)=="1");
+			altPressed  =(mString.charAt(2)=="1");
+			self.status="modifiers="+e.modifiers+" ("+mString+")"
+		}
+ 		else 
+ 		{
+  			shiftPressed=event.shiftKey;
+ 	 		altPressed  =event.altKey;
+  			ctrlPressed =event.ctrlKey;
+ 		}
+ 		if (shiftPressed || altPressed || ctrlPressed) 
+  			alert ("Funcion no permitida");
+ 	}
+ 	return true;
+}
+
+if (parseInt(navigator.appVersion)>3) {
+	document.onmousedown = mouseDown;
+	if (navigator.appName=="Netscape") 
+		document.captureEvents(Event.MOUSEDOWN);
+}
+
+var message="";
+
+function clickIE() {
+	if (document.all){
+		(message);
+		return false;
+	}
+}
+
+function clickNS(e) {
+	if(document.layers||(document.getElementById&&!document.all)) {
+		if (e.which==2||e.which==3) {
+			(message);return false;
+		}
+	}
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEDOWN);
+	document.onmousedown=clickNS;
+}else{
+	document.onmouseup=clickNS;document.oncontextmenu=clickIE;
+}
+
+document.oncontextmenu=new Function("return false");
+
+var isIEx  = (navigator.appVersion.indexOf("MSIE") != -1) ? true : false;
+
+function alertSize() {
+  var myHeight = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    myHeight = window.innerHeight;
+  } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+    //IE 6+ in 'standards compliant mode'
+    myHeight = document.documentElement.clientHeight;
+  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    //IE 4 compatible
+    myHeight = document.body.clientHeight;
+  }
+  return myHeight;
+}
+
+function setElementHeight(elementName, indent) {
+  var elementEl = document.getElementById? document.getElementById(elementName): document.all? document.all[elementName]: null;
+  if (elementEl) {
+  elementEl.style.height = "auto"; // helps resize (for some) if new doc shorter than previous
+  // need to add to height to be sure it will all show
+  var h = alertSize();
+  var new_h = (h-indent);
+  try{
+  elementEl.style.height = new_h + "px";
+  }
+  catch(err){}
+  }
+}
+</script>
+
+		<script>
+	var warning = 300;
+	var timeout = 420;		
+	
+	var current = 0;
+	var timeOutActive = true;
+	
+	function popUpTimeOut(sURL) { window.open(unescape(sURL), "msgWindow","dependent=yes,titlebar=no,menubar=no,height=220,hotkeys=no,resizable=no,status=no,toolbar=no,width=530,alwaysRaised=1");  }
+	
+	function getSecs() {
+		if(timeOutActive){
+			current = current + 1;
+			if (current == warning) {
+				popUpTimeOut("/cb/pages/jsp/home/html/timeoutWarning1.html");
+			}
+			if (current == timeout - 10) {
+				popUpTimeOut("/cb/pages/jsp/home/html/timeoutWarning2.html");
+			}
+			if (current == timeout) {
+				logoutSVP();
+			}
+			window.setTimeout('getSecs()',1000);
+		}
+	}
+	
+	function isMessageCenterReloadUrl(url){
+		var result = false;
+		var validate;
+		try{
+			validate = url.indexOf(messageCenterReload);
+			if(validate != -1){
+				result = true;
+			}
+		}catch(err){}
+		return result;
+	}
+	
+$(document).ajaxComplete(function( event,request, settings ) {
+	if(!isMessageCenterReloadUrl(settings.url)){
+		current=0;
+	}	
+});
+	
+    $(this).keypress(function (e) {
+	
+        current = 0;
+    });
+	getSecs();
+</script>
+		
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="./ui.jqgrid.css"><script type="text/javascript" src="./gc-client.js"></script></head><body onbeforeunload="checkCloseWindow();" ondragstart="return false;" ondrop="return false;" class="container_body" onload="loadBanner(); setup(); loadGA();">
+	<form action="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/ExternalLinkLog" name="jumpBLUP" method="post" target="mainFrame">
+		<input type="hidden" name="sURL">	
+		<input type="hidden" name="subject">	
+	  	<input type="hidden" name="eventCode">	
+		<input type="hidden" name="userBehaviour">	  	  
+		<input type="hidden" name="appearance">	  	  
+	</form>
+	<script language="JavaScript">	
+		var ventana;
+		function jumpSubmitPopUp(sEventCode, sUserBehavior, sURL, sSubject, sAppearance) { 
+		    window.open(sURL, sSubject,sAppearance);
+		}
+		
+		function jumpSubmitProdPopUp(sSubject, sAppearance) { 
+			var url='https://www.grupobancolombia.com/wps/portal/personas/solicitud-de-productos-wcm#/tarjetaCredito';
+		    window.open(url, sSubject,sAppearance);
+		}
+		
+		function jumpAsesoriaPopUp(sEventCode, sSubject, sAppearance) { 
+			var url="https://www.grupobancolombia.com/wps/portal/personas/contactanos/bancolombia/";
+		    var ven=window.open(url, "ventana", sAppearance);
+		    ven.focus();
+		}
+
+		function jumpSeguridadPopUp(sEventCode, sSubject, sAppearance) {
+			var url= "http://www.grupobancolombia.com/home/sucursalVirtual/medidasSeguridadCanales.asp"
+		    var ven=window.open(url, "ventana", sAppearance);
+		    ven.focus();
+		}	
+
+		function jumpPuntosDeAtencionPopUp(sAppearance) {
+			var url = 'http://www.grupobancolombia.com/wps/portal/personas/buscador-sucursales/';
+			var ven=window.open(url, "ventana");
+		    ven.focus();		
+
+		}	
+
+		function jumpNewTab(url) {
+            var ven=window.open(url, "_blank");
+            ven.focus();        
+        }
+		
+		function jumpAsesoria(sEventCode, sURL) { 
+			var eventCode="eventCode="+sEventCode;
+			var urlOwn = "urlOwn="+sURL;
+			var params = eventCode+"&"+urlOwn+"&"+getCstParam();
+
+			var url="/cb/pages/jsp-ns/olb/AsesoriaLinkFatwire?"+params;
+			return url;
+		}
+
+		function jumpSeguridad(sEventCode) {
+			var eventCode="eventCode="+sEventCode;
+			var params = eventCode+"&"+getCstParam();
+			var url="/cb/pages/jsp-ns/olb/SeguridadLinkFatwire?"+params;
+			return url;
+
+		}
+		
+		function jumpSubmit(sEventCode, sUserBehavior, sURL, sSubject) {
+			document.jumpBLUP.action =  "ExternalLinkLog";
+	  	    document.jumpBLUP.subject.value = sSubject;
+		    document.jumpBLUP.sURL.value =  sURL;
+		    document.jumpBLUP.eventCode.value = sEventCode;
+			document.jumpBLUP.userBehaviour.value = sUserBehavior;	   
+			document.jumpBLUP.appearance.value = "NONE"; 
+			document.jumpBLUP.target = "mainFrame"; 		
+			document.jumpBLUP.submit();
+		}
+		
+		function jumpSubmitExtractos(sEventCode, sUserBehavior, sURL, sSubject) {
+			document.jumpBLUP.action =  "ExternalLinkLogJumpExtractos";
+	  	    document.jumpBLUP.subject.value = sSubject;
+		    document.jumpBLUP.sURL.value =  sURL;
+		    document.jumpBLUP.eventCode.value = sEventCode;
+			document.jumpBLUP.userBehaviour.value = sUserBehavior;	   
+			document.jumpBLUP.appearance.value = "NONE"; 
+			document.jumpBLUP.target = "mainFrame";
+			document.jumpBLUP.submit();
+		}
+
+		/**
+		* If the user click in the X to close the window, the application sends a message
+		* to the bank (LOGOUT). 
+		* This event is controlled by this page, in the "onBeforeunload" event.
+		*
+		*/
+		function closedWindowDetected(){	
+			// the leftFrameValue is the indicator to know if the application"s to send the LOGOUT message
+			// because if the user has already clicked de "Safe Exit" in the menu the LOGOUT message is send, so 
+			// if the user click on the X after that, the application has not to send the LOGOUT message because 
+			// it"s been sended
+			try{
+				var leftFrameValue =  new String (top.leftFrame.location);
+				var userPresent = new String ("7148546");
+				// if the leftFrameValue does not contain the "hidden" word (as subString)--> send the LOGOUT message
+				if (leftFrameValue.indexOf("hidden") == -1 && userPresent != ""){
+					popUpTimeOutSSO("/cb/olb/GeneralDispatch?fwd=generateExitByX");	 
+		     	}
+			}catch(e){
+	     		
+	     	}
+		}
+		//V4.8.9 - DEVBOLPBC-52 (Error en vencimiento de Sesión).Ajax para controlar que el CM se haya cargado o no en la aplicación.
+		function checkCloseWindow(){	
+			try{
+			   if (top.cmVisible == true){
+				    $.ajax({
+						async:false,   
+						cache:false,  
+						dataType:"html",
+						type: "GET",  
+						url: '/servlet/CM/ServletCheckExitCM?'+getCstParam(),
+						success:  function(response){
+							if (response != "true"){
+								closedWindowDetected();
+							 }
+						},
+						beforeSend:function(){},
+						error:function(objXMLHttpRequest){
+							closedWindowDetected();
+						}
+					});				
+				}
+				else{
+					closedWindowDetected();
+				}
+			}
+			catch(e){
+				closedWindowDetected();
+			}
+		}
+
+		function popUpTimeOutSSO(sURL) { 
+			window.open(unescape(sURL), "msgWindow","dependent=yes,titlebar=no,menubar=no,height=150,hotkeys=no,resizable=no,status=no,toolbar=no,width=300,alwaysRaised=1");  
+		}
+		
+		function jumpPuntosBCPopUp(sEventCode, sUserBehavior, sURL, sSubject, sAppearance) {
+			var ven=window.open(sURL);
+		    ven.focus();		
+		}
+
+	</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"33598753","applicationTime":2,"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"017cf77fef","transactionName":"YAFQY0VZWkFTAUcPX1lLYUNFTUBBcwFHD19ZS1hER35bQEUDQQI=","agent":"","errorBeacon":"bam.nr-data.net"}</script>
+
+		
+
+
+
+<!-- Data device finger print collector -->
+<script type="text/javascript" src="./rsa.js"></script>
+<script type="text/javascript" src="./json2.js"></script>
+
+<script type="text/javascript"> 
+	// Obtener deviceprint
+	function getDeviceData() {
+		var dataURLPart = "";
+		var devprint = add_deviceprint();
+		var encoded_devprint = urlEncode(cleanDP(devprint));
+		dataURLPart = "&devicePrint=" + encoded_devprint;
+
+		return dataURLPart;
+	}
+
+	function cleanDP(dp) {
+		return dp.replace(/like/gi, "l1k3");
+	}		
+
+	function getCSRFParam() {
+		return "CSRF_TOKEN=" + '3944356175948187676';	
+	}
+</script>
+
+		
+		<script src="./selectedMenu.js"></script>
+		<script src="./showLoadingBank(2).js"></script>
+		<script src="./messagecenter-index.js"></script>
+		<script src="./ad.manager.js"></script>
+		
+		<!--[if lt IE 8]>
+			<link type="text/css" rel="stylesheet" media="all" href="/cb/web/css/Bancolombia/icon_more_service_ie7.css?version=1.9.2.RC1" />
+			<script src="/cb/web/js/home/icon_more_service_ie7.js?version=1.9.2.RC1"></script>
+		<!--<![endif]-->
+
+		<script type="text/javascript" src="./porthole.min.js"></script>
+		<!--[if gt IE 9]>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./bluebird.min.js"></script>
+		<script type="text/javascript" src="./jquery.number.js"></script>
+		
+		<script type="text/javascript">
+			var windowProxy1;
+
+			
+
+			var guestDomain = 'cicbc.sf.transaccionesbancolombia.com';
+			var guestDomainTI = 'https://linksinteligentessvp.bancolombia.com';
+			var guestDomainTIUrl = 'https://linksinteligentessvp.bancolombia.com/MLDSVP/SessionLinkServlet';
+			
+			function onMessage1(messageEvent) {
+				if (messageEvent.origin == "https://" + guestDomain) {
+					if(messageEvent.data["msgApp"]=='restart'){
+						current = 0;
+						// se elimino el llamado al metodo getSecs
+					}
+					if(messageEvent.data["msgApp"]=='back'){
+						breadCrumb_dinamic('','','')
+						loadDeposits();
+					}
+				} 
+				if(messageEvent.data["msgApp"]=='start-loading'){
+					$( "#loading-cic").removeClass("noshow-cic");
+					$( "#content-notes").addClass("show-cic-index");
+					$(".container_body").addClass('modal-open2');
+				}
+				if(messageEvent.data["msgApp"]=='stop-loading'){
+					$( "#loading-cic").addClass("noshow-cic");
+					$( "#content-notes").removeClass("show-cic-index");
+					$(".container_body").removeClass('modal-open2');
+				}
+			}
+
+			function onRefreshTransDigital(messageEvent){
+				if (messageEvent.origin == guestDomainTI) {
+					if(messageEvent.data["session"]=='cmdRefresh'){
+						current = 0;
+					}
+				}
+			}
+			
+			showLoadingDialog();
+			var context="/cb";
+						
+			function detectIE10(){
+				var isIE10 = false;
+			    return isIE10;
+			}
+			
+			function getCstParam(){
+				return 'cst=2KazBmfUgO%2BzD43IpSNAHeSgkYrzaoKR6TmkjDfyzvPaDA%2B6iamKIs6PudtGFXCo';
+			}
+			
+			function invokeActionError(code){
+				var params = "err="+code;
+				var errorUrl = "/cb/pages/jsp/errors/ConfigFunctionalityErrorCode.action";
+				executeAjaxRequest(errorUrl,params);
+			}
+			
+			// DEVBCBOLP-1297: Se quitan los efectos "slow" ya que se desconfiguraba la grilla de los detalles 
+			//de movimientos al presentar el panel lateral de centro de mensajes
+			function showMisMensajes(callback){
+				var forceAuthFlag = $( "#isForceAuthenticated").val();
+				var CM_CIC_Menu_loaded = $( "#isCM_CIC_Menu_loaded").val();
+				if(forceAuthFlag){
+					$( "#panelMisMensajes").show();
+					if(callback){
+						if(CM_CIC_Menu_loaded ==='false'){
+							callback();	
+						}
+					}
+				}
+			}
+			
+			function hiddeMisMensajes(){
+				$( "#panelMisMensajes").hide();
+				$( "#isCM_CIC_Menu_loaded").val(false);
+			}
+			
+			function timeLastVisited(arg){
+			 	var lastAccess = arg.charAt(0).toUpperCase() + arg.slice(1);
+			 	lastAccess = lastAccess.replace("a las", " ");
+			 	$("#lastVisited").text(lastAccess);
+		     }
+			
+			$(document).ready(function() {
+				
+				$.subscribe('errorGrid', function(event, data) {
+					var responseHTML = event.originalEvent.request.responseText;
+					if(responseHTML && responseHTML.indexOf("code=1000") > 0){
+						$( "#notes" ).html(responseHTML);
+					}
+				});
+		
+				var browser = "";				
+				if(browser == "WARNING"){					
+					$("#divMessageBrowser").show();
+					document.getElementById('divMessage').innerHTML = "Para que puedas tener una mejor experiencia y utilizar todos los servicios de nuestra Sucursal Virtual Personas, te recomendamos actualizar el navegador de internet a la &uacute;ltima versi&oacute;n. Con la versi&oacute;n actual, puedes acceder a la Sucursal Virtual Personas, sin embargo ver&aacute;s limitadas algunas funcionalidades.";
+				}else if(browser == "ERROR"){					
+					$("#divMessageBrowser").show();
+					document.getElementById('divMessage').innerHTML = "Para que puedas tener una mejor experiencia y disfrutar de todos los beneficios que tenemos en nuestra Sucursal Virtual Personas, es necesario que actualices el navegador de internet a la &uacute;ltima versi&oacute;n.";
+				}else{
+					$("#divMessageBrowser").hide();
+				}
+				
+				/**
+				Para comunicacion entre aplicaciones de diferentes domains.
+				*/
+				windowProxy1 = new Porthole.WindowProxy('https://' + guestDomain + '/apex/fundsOpeningProxy_rst_pag', 'FUND_OPENING_LANDING');
+				windowProxy1.addEventListener(onMessage1);
+				windowProxy2 = new Porthole.WindowProxy(guestDomainTIUrl, 'TRANSFERSITERNAL');
+				windowProxy2.addEventListener(onRefreshTransDigital);
+				
+				function refreshLoadingIndicator(obj) {
+					if(('panelHeading1'==obj.attr('id')) && !$("#collapseOne").hasClass("in")) {
+						$("#loading-indicator-MESSAGE_CENTER_SMALL").delay(50).slideDown(50);
+						$("#loading-indicator-MESSAGE_CENTER_SMALL-overlay").delay(50).slideDown(50);
+					} else {
+						$("#loading-indicator-MESSAGE_CENTER_SMALL").slideUp(50);
+						$("#loading-indicator-MESSAGE_CENTER_SMALL-overlay").slideUp(50);
+					}
+				}
+				
+				$("#panelHeading1, #panelHeading2, #panelHeading3, #panelHeading4").unbind().bind("click",function(e) {
+					refreshLoadingIndicator($(this));
+				});
+				
+				var urlString = "/cb/pages/jsp-ns/olb/PersonalizeProductsNameDataEntry?"+getCstParam();
+			    $.ajax({
+					url : urlString,
+					cache: false,
+					success : function(data) {
+						urlString = "/cb/pages/jsp-ns/olb/ChangeNameACHDataEntry?"+getCstParam();
+						$.ajax({
+							url : urlString,
+							cache: false,
+							success : function(data) {
+							}
+						});
+					}
+				});
+			    var secondpass = "/cb/pages/jsp/notification/userSecondPass.action";
+			    $.ajax({
+					url : secondpass,
+					cache: false,
+					success : function(data) {
+						
+						}
+						});
+
+			});
+			
+			/*Este codigo para cambio de letra en combobo solo para ie8, ie9 e ie10*/
+			$(document).ajaxSuccess(function( event,request, settings ) {
+				/*for IE8, IE9 e IE10*/
+				try{
+					if(jQuery.browser.msie) {
+						if( document.documentMode == "8" || document.documentMode == "9" || document.documentMode == "10"){
+							$(document).find("select").removeClass("form-control");
+							$(document).find("select").css({
+								"font-family": "Trebuchet MS, Helvetica, sans-serif !important"
+						    });
+						}
+					}
+				}catch(err){}
+			});
+			
+			
+			var ua = window.navigator.userAgent;
+			var msie = ua.indexOf("MSIE ");
+			if (msie > 0  || !!navigator.userAgent.match(/Trident.*rv\:11\./) )
+		    {
+		        if (!String.prototype.startsWith) {
+				    String.prototype.startsWith = function(searchString, position){
+				      position = position || 0;
+				      return this.substr(position, searchString.length) === searchString;
+				  };
+				}
+		    }
+			
+		</script>		
+
+		
+		
+		<script language="JavaScript">		
+		function logout(){
+			showLoadingDialog();
+			/*Se invoca la URL para cerrar la sesion con el banco*/
+			var urlLogout = "/cb/pages/jsp-ns/olb/SafeExit?"+getCstParam();
+			$.ajax({
+				url : urlLogout,
+				success : function(data) {
+					
+					}
+			});
+			
+			var url='/cb';
+			setTimeout(function(){
+				window.location.href = url+"/pages/jsp-ns/invalidate-session.jsp";
+					},1000);
+			
+			
+		}
+
+		function logoutForce(callback){
+			var urlLogoutFORCE = "https://cic-bc.my.salesforce.com/secur/logout.jsp";
+			document.forwardCMLOGOUT.action = urlLogoutFORCE;
+			document.forwardCMLOGOUT.submit();
+			document.getElementById('MESSAGE_CENTER_LOGOUT').onload= function() {
+				if(callback){	
+					callback();
+				}
+			}
+		}
+
+		function logoutSVP(){
+			logoutForce(function(){
+				setTimeout(logout,1000);
+			});
+		}
+		
+		function loadGA(){
+			setGestorUrl("true", "https://gestoranuncios.todo1.com/docs/gestor/js/gc-client.js");
+		}
+		</script>
+
+		
+		<!--[if lt IE 9]>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+		
+	
+    
+     
+		<div class="backendMsgContainer" id="divMessageBrowser" style="display:none; padding-bottom=10px;">				
+			<div class="advertenciaDiv">
+				<div class="divTextMessage">
+					<span class="icon-advertencia advertenciaIcon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+					<div class="advertenciaTitulo">
+						Atención
+					</div>
+					<div class="advertenciaTexto" id="divMessage"></div>
+				</div>
+			</div>	
+		</div>
+
+		<!-- Modal Confirmation-->
+		<div class="modal fade modalPopupConfirmation dialogModalSalir" id="confirmationLogout" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal_Center_Popup">
+		      <div class="modal-header modal-headerPopup">
+		        <button type="button" class="close closeButtomPopup" data-dismiss="modal" aria-label="Close"><span class="glyphicon icon-cancel" aria-hidden="true"></span></button>
+		      </div>
+		      <div class="modal_panel_second">
+		      	<div class="modal_subtitle_item">
+			      	<h1>Salir</h1>
+			      </div>
+			      <div class="modal_subtext_item">
+			      	<h4>Selecciona para continuar o salir de forma segura.</h4>
+			      </div>
+			      <div class="modal-body">
+			        <span class="glyphicon icon-icono_salir popup-Icons"></span><span class="text-svp-name">¿Desea salir de la sucursal virtual? </span>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn_Default_Popup" data-dismiss="modal">No</button>
+			        <button type="button" class="btn btn-labeled btn_Succed_Popup" onclick="logoutSVP();" data-dismiss="modal">Sí</button>
+			      </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		<div id="header0" style="height:0;">&nbsp;</div>
+		<div id="header" class="page-header">
+			<div class="row row-logo-svp"> 
+				<div class="col-xs-4 col-md-4 col-sm-4 left-div">
+					<a id="imageLogoIntegrationLink" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+						<img id="imageLogoIntegration" class="imgLogoItem" alt="FFI" src="./logo.png" srcset="../../../web/css/Bancolombia/images/logo_bancolombia.svg">
+					</a>
+					<div class="text-svp-name">Sucursal Virtual Personas</div>
+				</div>
+				<div class="col-xs-8 col-md-8 col-sm-8 right-div">
+					<ul class="nav nav-pills right-div">
+						<li class="nav_Itemlist">
+							<a id="link_help_solicitarproductos" class="itemsIcons-Labels" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#"> 
+								<span class="glyphicon adminItems-Icons icon-SolicitarProductos">
+                					<span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>
+                				</span>
+								<span class="adminItems-Labels">
+									<p>Solicitud de</p>
+									<p>productos</p>
+								</span>
+							</a>
+						</li>
+						<li class="nav_Itemlist">
+							<a id="link_prod_puntos_colombia" class="itemsIcons-Labels" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+								<span class="solicitarproductos-icon_1"></span>
+								<span class="adminItems-Labels">
+									<p>Puntos</p>
+									<p>Colombia</p>
+								</span>
+							</a>
+						</li>
+						<li class="nav_Itemlist">
+							<a id="link_help_seguridad" class="itemsIcons-Labels" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#"> 
+								<span class="glyphicon icon-icono_seguridad adminItems-Icons"></span>
+								<span class="adminItems-Labels">Seguridad</span>
+							</a>
+						</li>
+						<li class="nav_Itemlist">
+							<a id="link_help_asesoria" class="itemsIcons-Labels" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#"> 
+								<span class="glyphicon icon-icono_contacto adminItems-Icons"></span>
+								<span class="adminItems-Labels">Contáctanos</span>
+							</a>
+						</li>
+						<li class="nav_Itemlist">
+							<a id="link_help_buscar" class="itemsIcons-Labels" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#"> 
+								<span class="glyphicon icon-icono_visitanos adminItems-Icons"></span>
+								<span class="adminItems-Labels">Visítanos</span>
+							</a>
+						</li>
+						<li class="itemLogout">
+							<a id="link_LogOut_SVP1" class="itemsIcons-LabelsLogout" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" data-toggle="modal" data-target="#confirmationLogout">
+								<span class="glyphicon icon-icono_salir adminItems-Icons"></span>
+								<span class="adminItems-Labels">Salir</span>
+							</a>			
+							
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+			
+				<div class="col-xs-6 col-md-6 col-sm-6 left-div">
+					<div class="title-text">
+						<div id="lastIn" class="title-text">
+							<div class="timeText">Su última visita fue:</div>
+							<span id="lastVisited" class="lastVisitedText">Viernes 21 de Septiembre de 2018     3:34:18 PM</span>
+							
+
+
+
+
+
+<script type="text/javascript" src="./jquery.jclock.js"></script>
+
+
+ <script type="text/javascript">
+     $(function($) {
+         var optionsEST = {
+         am_pm: true,
+         timeNotation: '12h', 
+         h_hour: "15:40:34", 
+         h_date: "2018/09/22", 
+         h_format: "$nombreDia$ $dia$ de $nombreMes$ de $anio$ $hhmmss$ $ampm$", 
+         h_language: "es"  
+        }
+     $('#jclock1').jclock(optionsEST);
+     });
+ </script>
+<div class="titulin">
+	<div class="timeText">Fecha y hora actual:</div>
+	<span id="jclock1" class="lastVisitedText">Sábado 22 de Septiembre de 2018 3:42:31  PM</span>
+</div>
+						</div>	
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-6 col-sm-6 right-div">
+					
+					
+					
+					
+					
+					<div class="pull-right text-client-name">
+						<span>
+							GARYN JAIRO CARRILLO CABALLERO
+						</span>
+					</div>
+					
+					
+					<div class="pull-right dropdown-hover" close="false">
+						<a id="" class="itemsLink-Labels" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">Actualizar mis datos</a>
+						<div class="icon-triangle-up triangle-up-hover"></div>
+						<ul class="dropdown-content second_level_menu">
+							<li class="dropdown-header">
+								Actualizar
+							</li>
+							<li class="second_level_menu_item">
+								<a class="item_third_level_menu" id="link_update_data" onclick="onClickMenuItem(&#39;link_update_data&#39;,&#39;/cb/pages/jsp-ns/olb/ActiveRSACheck&#39;,&#39;&#39;,&#39;ACTDATOS&#39;,&#39;DATOSPERS&#39;,&#39;N&#39;,&#39;Actualizar mis datos&#39;,&#39;Actualizar&#39;,&#39;Datos personales&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+									Datos personales
+								</a>
+							</li>
+							<li class="second_level_menu_item">
+								<a class="item_third_level_menu" id="link_datos_contacto" onclick="onClickMenuItem(&#39;link_datos_contacto&#39;,&#39;/cb/pages/jsp-ns/olb/UpdateCustomerDataQuery?UPD_CONTACT=UPD_CONTACT&#39;,&#39;&#39;,&#39;ACTDATOS&#39;,&#39;DATOSCON&#39;,&#39;N&#39;,&#39;Actualizar mis datos&#39;,&#39;Actualizar&#39;,&#39;Datos de contacto&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+									Datos de contacto
+								</a>
+							</li>
+							<li class="second_level_menu_item">
+								<a class="item_third_level_menu" id="link_datos_seguridad" onclick="onClickMenuItem(&#39;link_datos_seguridad&#39;,&#39;/cb/pages/jsp-ns/olb/GetOtpServicesSecurityData&#39;,&#39;&#39;,&#39;ACTDATOS&#39;,&#39;OTPSECDAT&#39;,&#39;N&#39;,&#39;Actualizar mis datos&#39;,&#39;Actualizar&#39;,&#39;Datos de seguridad&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+									Datos de seguridad
+								</a>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>		
+		<div id="menuContainer" class="menuContainer">
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+<div class="navbar  navbar-blue" role="navigation">
+	<div class="navbar-collapse collapse navbar-collapse-menu">
+		<ul class="nav navbar-nav firstLevelMegaMenu sm" data-smartmenus-id="1537648836398493">
+			
+			<li class="firt_level_menu">
+				<a id="home" class="item_firt_level_menu item_firt_level" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" data-toggle="tab">
+					
+					Inicio
+			</a></li>
+			
+			<li class="firt_level_menu">
+				<a href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" class="item_firt_level_menu has-submenu">
+					
+					Productos
+				<span class="sub-arrow"></span></a>				
+				<ul class="mega-menu mega-dropdown-menu ">
+					<li class="row_menu row">
+						
+						<ul class="col_menu col-sm-3 col-md-3">
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-12 col-md-12">
+										<li class="dropdown-header">
+											
+											Cuentas de ahorro y corriente
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_cuenta" onclick="onClickMenuItem(&#39;link_prod_cuenta&#39;,&#39;/cb/pages/jsp-ns/olb/InitAccountSummary?type=DEPOSITS&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;CUENTAC&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Cuentas de ahorro y corriente&#39;,&#39;Consultar cuentas&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Consultar cuentas
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_detail_transfer" onclick="onClickMenuItem(&#39;link_prod_detail_transfer&#39;,&#39;/cb/pages/jsp/fundtransfer/invokeFundTransfersAchNoteDebCre.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;TRROBNDC&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Cuentas de ahorro y corriente&#39;,&#39;Ver detalle de transacciones&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Ver detalle de transacciones
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-12 col-md-12">
+										<li class="dropdown-header">
+											
+											Tarjetas de crédito
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_ctc" onclick="onClickMenuItem(&#39;link_prod_ctc&#39;,&#39;/cb/pages/jsp/account/index-grid_creditCard_invoke.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;TCREDITCON&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Tarjetas de crédito&#39;,&#39;Consultar tarjetas&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Consultar tarjetas
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_pay_ownCard" onclick="onClickMenuItem(&#39;link_prod_pay_ownCard&#39;,&#39;/cb/pages/jsp-ns/olb/InitAccountSummary?type=CARDS&#39;,&#39;/cb/pages/jsp-ns/olb/AccountPaymentSelector?accountType=PAGOCARD&#39;,&#39;PAY&#39;,&#39;PAYOC&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Tarjetas de crédito&#39;,&#39;Pagar tarjetas&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Pagar tarjetas
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_aec" onclick="onClickMenuItem(&#39;link_prod_aec&#39;,&#39;/cb/pages/jsp/ecard/newEcardInvoke.jsp?type=CARDS&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;PROCTAPERTURAECARD&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Tarjetas de crédito&#39;,&#39;Solicitar E-Card&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Solicitar E-Card
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+						</ul>
+						
+						<ul class="col_menu col-sm-6 col-md-6">
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-6 col-md-6">
+										<li class="dropdown-header">
+											
+											Créditos
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_ccr" onclick="onClickMenuItem(&#39;link_prod_ccr&#39;,&#39;/cb/pages/jsp-ns/olb/InitAccountSummary?type=LOANS&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;CREDITCONS&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Créditos&#39;,&#39;Consultar créditos&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Consultar créditos
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_pay_cred" onclick="onClickMenuItem(&#39;link_prod_pay_cred&#39;,&#39;/cb/pages/jsp-ns/olb/InitAccountSummary?type=LOANS&#39;,&#39;/cb/pages/jsp-ns/olb/AccountPaymentSelector?accountType=PAGOPR&#39;,&#39;PAY&#39;,&#39;PAYCR&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Créditos&#39;,&#39;Pagar créditos&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Pagar créditos
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_dca" onclick="onClickMenuItem(&#39;link_prod_dca&#39;,&#39;/cb/pages/jsp/fundtransfer/invokeAudioLoan.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;CREDITDEAGIl&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Créditos&#39;,&#39;Desembolsar Crediágil&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Desembolsar Crediágil
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+									<ul class="second_level_menu col-sm-6 col-md-6">
+										<li class="dropdown-header">
+											
+											Fondos de inversión
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_cfi" onclick="onClickMenuItem(&#39;link_prod_cfi&#39;,&#39;/cb/pages/jsp-ns/olb/InitAccountSummary?type=FIDUCIARIES&amp;prodType=ALL&amp;group=Y&amp;allFiduciaries=Y&amp;controlRS=SPCC&amp;&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;FQUERY&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Fondos de inversión&#39;,&#39;Consultar fondos&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Consultar fondos
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_afi" onclick="onClickMenuItem(&#39;link_prod_afi&#39;,&#39;/cb/pages/jsp/funds/fundsOpeningCallable.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;FOPENING&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Fondos de inversión&#39;,&#39;Abrir un fondo&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Abrir un fondo
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_adfi" onclick="onClickMenuItem(&#39;link_prod_adfi&#39;,&#39;/cb/pages/jsp-ns/olb/ACCTARGETQuery?entity=FUND_LIST&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;FADMIN&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Fondos de inversión&#39;,&#39;Administrar fondos&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Administrar fondos
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-6 col-md-6">
+										<li class="dropdown-header">
+											
+											Inversiones
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_civ" onclick="onClickMenuItem(&#39;link_prod_civ&#39;,&#39;/cb/pages/jsp-ns/olb/InitAccountSummary?type=INVESTMENTS&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;VIRTUALCONS&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Inversiones&#39;,&#39;Consultar inversiones&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Consultar inversiones
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_aiv" onclick="onClickMenuItem(&#39;link_prod_aiv&#39;,&#39;/cb/pages/jsp-ns/olb/VirtualInvestmentDataEntry&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;VIRTUALAPERTURA&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Inversiones&#39;,&#39;Abrir Inversión Virtual&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Abrir Inversión Virtual
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+									<ul class="second_level_menu col-sm-6 col-md-6">
+										<li class="dropdown-header">
+											
+											Administrar productos
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_aic" onclick="onClickMenuItem(&#39;link_prod_aic&#39;,&#39;/cb/pages/jsp/account/enrrollProduct_invoke.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;INSCRIPCIONCUETA&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Administrar productos&#39;,&#39;Inscribir cuentas&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Inscribir cuentas
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_app" onclick="onClickMenuItem(&#39;link_prod_app&#39;,&#39;/cb/pages/jsp/account/adminProduct_own_invoke.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;PRODUCTPAYP&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Administrar productos&#39;,&#39;Productos propios&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Productos propios
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_apt" onclick="onClickMenuItem(&#39;link_prod_apt&#39;,&#39;/cb/pages/jsp/account/adminProduct_third_invoke.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;PRODUCTPAYT&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;Administrar productos&#39;,&#39;Productos de terceros&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Productos de terceros
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+						</ul>
+						
+						<ul class="col_menu col-sm-3 col-md-3">
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-12 col-md-12">
+										<li class="dropdown-header">
+											
+											e-Prepago
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_sep" onclick="onClickMenuItem(&#39;link_prod_sep&#39;,&#39;/cb/pages/jsp/e-prepago/prePayRequestInvoke.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;EPAYSOLIC&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;e-Prepago&#39;,&#39;Solicitar&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Solicitar
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_conep" onclick="onClickMenuItem(&#39;link_prod_conep&#39;,&#39;/cb/pages/jsp/e-prepago/prePayQueryInvoke.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;EPAYCONSUL&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;e-Prepago&#39;,&#39;Consultar&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Consultar
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_mep" onclick="onClickMenuItem(&#39;link_prod_mep&#39;,&#39;/cb/pages/jsp/e-prepago/prePayMovementsInvoke.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;EPAYMOVIMENT&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;e-Prepago&#39;,&#39;Ver movimientos&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Ver movimientos
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_cep" onclick="onClickMenuItem(&#39;link_prod_cep&#39;,&#39;/cb/pages/jsp/e-prepago/prePayLoadInvoke.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;EPAYCARGA&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;e-Prepago&#39;,&#39;Cargar&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Cargar
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_dep" onclick="onClickMenuItem(&#39;link_prod_dep&#39;,&#39;/cb/pages/jsp/e-prepago/prePayDownloadInvoke.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;EPAYDESCARGA&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;e-Prepago&#39;,&#39;Descargar&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Descargar
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_aep" onclick="onClickMenuItem(&#39;link_prod_aep&#39;,&#39;/cb/pages/jsp/e-prepago/prePayActivateInvoke.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;EPAYACT&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;e-Prepago&#39;,&#39;Activar&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Activar
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_prod_iep" onclick="onClickMenuItem(&#39;link_prod_iep&#39;,&#39;/cb/pages/jsp/e-prepago/prePayInactivateInvoke.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;EPAYINAC&#39;,&#39;N&#39;,&#39;Productos&#39;,&#39;e-Prepago&#39;,&#39;Inactivar&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Inactivar
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+						</ul>
+						
+					</li>
+				</ul>				
+			</li>
+			
+			<li class="firt_level_menu">
+				<a href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" class="item_firt_level_menu has-submenu">
+					
+					Transferencias
+				<span class="sub-arrow"></span></a>				
+				<ul class="mega-menu mega-dropdown-menu mega-dropdown-menu-with" style="display: none;">
+					<li class="row_menu row">
+						
+						<ul class="col_menu col-sm-12 col-md-12">
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-4 col-md-4">
+										<li class="dropdown-header">
+											
+											A cuentas Bancolombia
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_transf_aBancolombia" onclick="onClickMenuItem(&#39;link_transf_aBancolombia&#39;,&#39;/cb/pages/jsp/fundtransfer/invokeBCTransfer.jsp&#39;,&#39;/cb&#39;,&#39;TRANSFER&#39;,&#39;TBC&#39;,&#39;N&#39;,&#39;Transferencias&#39;,&#39;A cuentas Bancolombia&#39;,&#39;Transferir&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Transferir
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_transf_abcenrollaccts" onclick="onClickMenuItem(&#39;link_transf_abcenrollaccts&#39;,&#39;/cb/pages/jsp/account/enrrollProduct_invoke_from_menu.jsp&#39;,&#39;/cb&#39;,&#39;TRANSFER&#39;,&#39;TIC&#39;,&#39;N&#39;,&#39;Transferencias&#39;,&#39;A cuentas Bancolombia&#39;,&#39;Inscribir cuentas&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Inscribir cuentas
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_transf_abchis" onclick="onClickMenuItem(&#39;link_transf_abchis&#39;,&#39;/cb/pages/jsp/fundtransfer/invokeFundTransfersScheduleStatus.jsp&#39;,&#39;/cb&#39;,&#39;TRANSFER&#39;,&#39;TRRACOFC&#39;,&#39;N&#39;,&#39;Transferencias&#39;,&#39;A cuentas Bancolombia&#39;,&#39;Ver histórico&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Ver histórico
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+									<ul class="second_level_menu col-sm-4 col-md-4">
+										<li class="dropdown-header">
+											
+											A otros bancos
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_transf_aOthers" onclick="onClickMenuItem(&#39;link_transf_aOthers&#39;,&#39;/cb/pages/jsp/fundtransfer/invokeACHTransfer.jsp&#39;,&#39;/cb&#39;,&#39;TRANSFER&#39;,&#39;TOB&#39;,&#39;N&#39;,&#39;Transferencias&#39;,&#39;A otros bancos&#39;,&#39;Transferir&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Transferir
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_transf_abcenrollaccts" onclick="onClickMenuItem(&#39;link_transf_abcenrollaccts&#39;,&#39;/cb/pages/jsp/account/enrrollProduct_invoke_from_menu.jsp&#39;,&#39;/cb&#39;,&#39;TRANSFER&#39;,&#39;TIC&#39;,&#39;N&#39;,&#39;Transferencias&#39;,&#39;A otros bancos&#39;,&#39;Inscribir cuentas&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Inscribir cuentas
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_transf_reaob" onclick="onClickMenuItem(&#39;link_transf_reaob&#39;,&#39;/cb/pages/jsp/fundtransfer/invokeFundTransfersStatus.jsp&#39;,&#39;/cb&#39;,&#39;TRANSFER&#39;,&#39;TRROB&#39;,&#39;N&#39;,&#39;Transferencias&#39;,&#39;A otros bancos&#39;,&#39;Ver histórico&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Ver histórico
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+									<ul class="second_level_menu col-sm-4 col-md-4">
+										<li class="dropdown-header">
+											
+											Internacionales
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_transf_irecep" onclick="onClickMenuItem(&#39;link_transf_irecep&#39;,&#39;/cb/pages/jsp/transferinternal/invokeTransferInternalLink.jsp?fwd=recep&#39;,&#39;/cb&#39;,&#39;TRANSFER&#39;,&#39;INTERNALRECEP&#39;,&#39;N&#39;,&#39;Transferencias&#39;,&#39;Internacionales&#39;,&#39;Recibir&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Recibir
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_transf_isend" onclick="onClickMenuItem(&#39;link_transf_isend&#39;,&#39;/cb/pages/jsp/transferinternal/invokeTransferInternalLink.jsp?fwd=send&#39;,&#39;/cb&#39;,&#39;TRANSFER&#39;,&#39;INTERNALSEND&#39;,&#39;N&#39;,&#39;Transferencias&#39;,&#39;Internacionales&#39;,&#39;Enviar&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Enviar
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_transf_iaccregis" onclick="onClickMenuItem(&#39;link_transf_iaccregis&#39;,&#39;/cb/pages/jsp/transferinternal/invokeTransferInternalLink.jsp?fwd=accregis&#39;,&#39;/cb&#39;,&#39;TRANSFER&#39;,&#39;INTERNALACCREGI&#39;,&#39;N&#39;,&#39;Transferencias&#39;,&#39;Internacionales&#39;,&#39;Inscribir cuentas&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Inscribir cuentas
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-4 col-md-4">
+										<li class="dropdown-header">
+											
+											A fondos de inversión
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_transf_aFondos" onclick="onClickMenuItem(&#39;link_transf_aFondos&#39;,&#39;/cb/pages/jsp/fundtransfer/invokeFondosTransfer.jsp&#39;,&#39;/cb&#39;,&#39;TRANSFER&#39;,&#39;TFI&#39;,&#39;N&#39;,&#39;Transferencias&#39;,&#39;A fondos de inversión&#39;,&#39;Transferir&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Transferir
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_transf_fienroll" onclick="onClickMenuItem(&#39;link_transf_fienroll&#39;,&#39;/cb/pages/jsp/account/enrrollProduct_invoke_from_menu.jsp&#39;,&#39;/cb&#39;,&#39;TRANSFER&#39;,&#39;TIC&#39;,&#39;N&#39;,&#39;Transferencias&#39;,&#39;A fondos de inversión&#39;,&#39;Inscribir fondos&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Inscribir fondos
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_transf_fihis" onclick="onClickMenuItem(&#39;link_transf_fihis&#39;,&#39;/cb/pages/jsp/fundtransfer/invokeFundTransfersScheduleStatus.jsp&#39;,&#39;/cb&#39;,&#39;TRANSFER&#39;,&#39;TRRACOFC&#39;,&#39;N&#39;,&#39;Transferencias&#39;,&#39;A fondos de inversión&#39;,&#39;Ver histórico&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Ver histórico
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+									<ul class="second_level_menu col-sm-4 col-md-4">
+										<li class="dropdown-header">
+											
+											Programar transferencias
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_transf_cacc" onclick="onClickMenuItem(&#39;link_transf_cacc&#39;,&#39;/cb/pages/jsp/fundtransfer/invokeBCTransfer.jsp&#39;,&#39;/cb&#39;,&#39;TRANSFER&#39;,&#39;TBC&#39;,&#39;N&#39;,&#39;Transferencias&#39;,&#39;Programar transferencias&#39;,&#39;A cuentas de ahorro y corriente&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												A cuentas de ahorro y corriente
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_transf_fi" onclick="onClickMenuItem(&#39;link_transf_fi&#39;,&#39;/cb/pages/jsp/fundtransfer/invokeFondosTransfer.jsp&#39;,&#39;/cb&#39;,&#39;TRANSFER&#39;,&#39;TFI&#39;,&#39;N&#39;,&#39;Transferencias&#39;,&#39;Programar transferencias&#39;,&#39;A fondos de inversión&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												A fondos de inversión
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_transf_progTrans" onclick="onClickMenuItem(&#39;link_transf_progTrans&#39;,&#39;/cb/pages/jsp/fundtransfer/invokeSCHTransfer.jsp&#39;,&#39;/cb&#39;,&#39;TRANSFER&#39;,&#39;TPT&#39;,&#39;N&#39;,&#39;Transferencias&#39;,&#39;Programar transferencias&#39;,&#39;Ver transferencias programadas&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Ver transferencias programadas
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+						</ul>
+						
+					</li>
+				</ul>				
+			</li>
+			
+			<li class="firt_level_menu">
+				<a href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" class="item_firt_level_menu has-submenu">
+					
+					Pagos
+				<span class="sub-arrow"></span></a>				
+				<ul class="mega-menu mega-dropdown-menu mega-dropdown-menu-with1">
+					<li class="row_menu row">
+						
+						<ul class="col_menu col-sm-12 col-md-12">
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-6 col-md-6">
+										<li class="dropdown-header">
+											
+											Tarjetas de crédito
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_payments_ownCard" onclick="onClickMenuItem(&#39;link_payments_ownCard&#39;,&#39;/cb/pages/jsp-ns/olb/InitAccountSummary?type=CARDS&#39;,&#39;/cb/pages/jsp-ns/olb/AccountPaymentSelector?accountType=PAGOCARD&#39;,&#39;PAY&#39;,&#39;PAYOC&#39;,&#39;N&#39;,&#39;Pagos&#39;,&#39;Tarjetas de crédito&#39;,&#39;Pagar tarjeta propia&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Pagar tarjeta propia
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_payments_otherCard" onclick="onClickMenuItem(&#39;link_payments_otherCard&#39;,&#39;/cb/pages/jsp/payments/invokeOtherCreditCardPayment.jsp&#39;,&#39;/cb&#39;,&#39;PAY&#39;,&#39;PAYTNP&#39;,&#39;N&#39;,&#39;Pagos&#39;,&#39;Tarjetas de crédito&#39;,&#39;Pagar tarjeta no propia&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Pagar tarjeta no propia
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+									<ul class="second_level_menu col-sm-5 col-md-5">
+										<li class="dropdown-header">
+											
+											Facturas
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_payments_repf" onclick="onClickMenuItem(&#39;link_payments_repf&#39;,&#39;/cb/pages/jsp/billpayment/invokeBillPayment.jsp&#39;,&#39;/cb&#39;,&#39;PAY&#39;,&#39;PAYF&#39;,&#39;N&#39;,&#39;Pagos&#39;,&#39;Facturas&#39;,&#39;Pagar facturas&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Pagar facturas
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_payments_insf" onclick="onClickMenuItem(&#39;link_payments_insf&#39;,&#39;/cb/pages/jsp/billpayment/invokeInscBills.jsp&#39;,&#39;/cb&#39;,&#39;PAY&#39;,&#39;PAYINS&#39;,&#39;N&#39;,&#39;Pagos&#39;,&#39;Facturas&#39;,&#39;Inscribir facturas&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Inscribir facturas
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_payments_hisf" onclick="onClickMenuItem(&#39;link_payments_hisf&#39;,&#39;/cb/pages/jsp/billpayment/invokePaymentHistory.jsp&#39;,&#39;/cb&#39;,&#39;PAY&#39;,&#39;PAYHIS&#39;,&#39;N&#39;,&#39;Pagos&#39;,&#39;Facturas&#39;,&#39;Ver histórico&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Ver histórico
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-6 col-md-6">
+										<li class="dropdown-header">
+											
+											Créditos
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_payments_cred" onclick="onClickMenuItem(&#39;link_payments_cred&#39;,&#39;/cb/pages/jsp-ns/olb/InitAccountSummary?type=LOANS&#39;,&#39;/cb/pages/jsp-ns/olb/AccountPaymentSelector?accountType=PAGOPR&#39;,&#39;PAY&#39;,&#39;PAYCR&#39;,&#39;N&#39;,&#39;Pagos&#39;,&#39;Créditos&#39;,&#39;Pagar créditos&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Pagar créditos
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+						</ul>
+						
+					</li>
+				</ul>				
+			</li>
+			
+			<li class="firt_level_menu">
+				<a href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" class="item_firt_level_menu has-submenu">
+					
+					Seguridad
+				<span class="sub-arrow"></span></a>				
+				<ul class="mega-menu mega-dropdown-menu mega-dropdown-menu-with0">
+					<li class="row_menu row">
+						
+						<ul class="col_menu col-sm-4 col-md-4">
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-12 col-md-12">
+										<li class="dropdown-header">
+											
+											Opciones de clave
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_seguridad_ssecc" onclick="onClickMenuItem(&#39;link_seguridad_ssecc&#39;,&#39;/cb/pages/jsp/security/adminSecondFactor_invoke1.jsp&#39;,&#39;/cb&#39;,&#39;SEGURIDAD&#39;,&#39;SFENROLL&#39;,&#39;/security/adminSecondFactor_menu.jsp&#39;,&#39;Seguridad&#39;,&#39;Opciones de clave&#39;,&#39;Clave Dinámica&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Clave Dinámica
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-12 col-md-12">
+										<li class="dropdown-header">
+											
+											Bloqueos
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_seguridad_bts" onclick="onClickMenuItem(&#39;link_seguridad_bts&#39;,&#39;/cb/pages/jsp/block/blockCardInvoke.jsp&#39;,&#39;/cb&#39;,&#39;SEGURIDAD&#39;,&#39;BLOCKCARDS&#39;,&#39;N&#39;,&#39;Seguridad&#39;,&#39;Bloqueos&#39;,&#39;Bloquear tarjetas&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Bloquear tarjetas
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_seguridad_bcs" onclick="onClickMenuItem(&#39;link_seguridad_bcs&#39;,&#39;/cb/pages/jsp/block/blockKeyInvoke.jsp&#39;,&#39;/cb&#39;,&#39;SEGURIDAD&#39;,&#39;BLOCKKEY&#39;,&#39;N&#39;,&#39;Seguridad&#39;,&#39;Bloqueos&#39;,&#39;Bloquear clave&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Bloquear clave
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_seguridad_btc" onclick="onClickMenuItem(&#39;link_seguridad_btc&#39;,&#39;/cb/pages/jsp/block/blockKeysCardsInvoke.jsp&#39;,&#39;/cb&#39;,&#39;SEGURIDAD&#39;,&#39;BLOCKCARDSKEY&#39;,&#39;N&#39;,&#39;Seguridad&#39;,&#39;Bloqueos&#39;,&#39;Bloquear tarjetas y clave&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Bloquear tarjetas y clave
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+						</ul>
+						
+						<ul class="col_menu col-sm-4 col-md-4">
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-12 col-md-12">
+										<li class="dropdown-header">
+											
+											Alertas y notificaciones
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_seguridad_alertas" onclick="onClickMenuItem(&#39;link_seguridad_alertas&#39;,&#39;/cb/pages/jsp/notificationconfig/invokeNotificationConfig.jsp&#39;,&#39;/cb&#39;,&#39;SEGURIDAD&#39;,&#39;NOTIFICATIONS&#39;,&#39;N&#39;,&#39;Seguridad&#39;,&#39;Alertas y notificaciones&#39;,&#39;Editar preferencias&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Editar preferencias
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-12 col-md-12">
+										<li class="dropdown-header">
+											
+											Montos de transacciones
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_seguridad_limiteTransac" onclick="onClickMenuItem(&#39;link_seguridad_limiteTransac&#39;,&#39;/cb/pages/jsp/security/invokeTransactionLimit.jsp&#39;,&#39;/cb&#39;,&#39;SEGURIDAD&#39;,&#39;TRANSACLIMIT&#39;,&#39;N&#39;,&#39;Seguridad&#39;,&#39;Montos de transacciones&#39;,&#39;Editar límite de montos&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Editar límite de montos
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-12 col-md-12">
+										<li class="dropdown-header">
+											
+											Cheques
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_seguridad_contraordenCheques" onclick="onClickMenuItem(&#39;link_seguridad_contraordenCheques&#39;,&#39;/cb/pages/jsp/checkbook/invokeBlockChecks.jsp&#39;,&#39;/cb&#39;,&#39;SEGURIDAD&#39;,&#39;CONTRAORDEN&#39;,&#39;N&#39;,&#39;Seguridad&#39;,&#39;Cheques&#39;,&#39;Contraordenar cheques&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Contraordenar cheques
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+						</ul>
+						
+						<ul class="col_menu col-sm-4 col-md-4">
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-12 col-md-12">
+										<li class="dropdown-header">
+											
+											Imagen y frase de seguridad
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_seguridad_imageandphrase" onclick="onClickMenuItem(&#39;link_seguridad_imageandphrase&#39;,&#39;/cb/pages/jsp/security/invokeImageAndPhrase.jsp&#39;,&#39;/cb&#39;,&#39;SEGURIDAD&#39;,&#39;IMGANDPHRASE&#39;,&#39;N&#39;,&#39;Seguridad&#39;,&#39;Imagen y frase de seguridad&#39;,&#39;Editar&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Editar
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+						</ul>
+						
+					</li>
+				</ul>				
+			</li>
+			
+			<li class="firt_level_menu">
+				<a href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" class="item_firt_level_menu has-submenu">
+					
+					Documentos
+				<span class="sub-arrow"></span></a>				
+				<ul class="mega-menu mega-dropdown-menu mega-dropdown-menu-with2" style="display: none;">
+					<li class="row_menu row">
+						
+						<ul class="col_menu col-sm-12 col-md-12">
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-12 col-md-12">
+										<li class="dropdown-header">
+											
+											Generar
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_extracts" onclick="onClickMenuItem(&#39;link_extracts&#39;,&#39;/cb/pages/jsp-ns/olb/MenuDispatcherAction?fwd=md_extractos&#39;,&#39;/cb&#39;,&#39;DOCUMENT&#39;,&#39;DOCUMENTEXTRAC&#39;,&#39;N&#39;,&#39;Documentos&#39;,&#39;Generar&#39;,&#39;Extractos&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Extractos
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_certificates" onclick="onClickMenuItem(&#39;link_certificates&#39;,&#39;/cb/pages/jsp/documents/invokeExternalLink.jsp?fwd=cert&#39;,&#39;/cb&#39;,&#39;DOCUMENT&#39;,&#39;CERTT&#39;,&#39;N&#39;,&#39;Documentos&#39;,&#39;Generar&#39;,&#39;Certificados tributarios&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Certificados tributarios
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_report" onclick="onClickMenuItem(&#39;link_report&#39;,&#39;/cb/pages/jsp/documents/invokeReporteAnualCostosTotales.jsp&#39;,&#39;/cb&#39;,&#39;DOCUMENT&#39;,&#39;REPORTACOST&#39;,&#39;N&#39;,&#39;Documentos&#39;,&#39;Generar&#39;,&#39;Reporte anual de costos totales&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Reporte anual de costos totales
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_cartas_proyeccion" onclick="onClickMenuItem(&#39;link_cartas_proyeccion&#39;,&#39;/cb/pages/jsp/documents/invokeCartas.jsp&#39;,&#39;/cb&#39;,&#39;DOCUMENT&#39;,&#39;CARTASP&#39;,&#39;N&#39;,&#39;Documentos&#39;,&#39;Generar&#39;,&#39;Proyección Crédito Hipotecario&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Proyección Crédito Hipotecario
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+						</ul>
+						
+					</li>
+				</ul>				
+			</li>
+			
+			<li class="firt_level_menu">
+				<a href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" class="item_firt_level_menu has-submenu">
+					
+					Solicitud de productos
+				<span class="sub-arrow"></span></a>				
+				<ul class="mega-menu mega-dropdown-menu mega-dropdown-menu-with0">
+					<li class="row_menu row">
+						
+						<ul class="col_menu col-sm-4 col-md-4">
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-12 col-md-12">
+										<li class="dropdown-header">
+											
+											Créditos
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_request_fri" onclick="onClickMenuItem(&#39;link_request_fri&#39;,&#39;/cbhttps://www.grupobancolombia.com/wps/portal/personas/productos-servicios/creditos/consumo/libre-inversion/referido-credito-libre-inversion&#39;,&#39;/cb&#39;,&#39;REQPROD&#39;,&#39;FREEINV&#39;,&#39;N&#39;,&#39;Solicitud de productos&#39;,&#39;Créditos&#39;,&#39;Libre Inversión&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Libre Inversión
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_request_rqc" onclick="onClickMenuItem(&#39;link_request_rqc&#39;,&#39;/cbhttps://www.grupobancolombia.com/wps/portal/personas/productos-servicios/creditos/consumo/crediagil/referido-crediagil&#39;,&#39;/cb&#39;,&#39;REQPROD&#39;,&#39;REQCRED&#39;,&#39;N&#39;,&#39;Solicitud de productos&#39;,&#39;Créditos&#39;,&#39;Solicitar Crediágil&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Solicitar Crediágil
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_request_ca" onclick="onClickMenuItem(&#39;link_request_ca&#39;,&#39;/cb/pages/jsp/fundtransfer/invokeAudioLoan.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;CREDITDEAGIl&#39;,&#39;N&#39;,&#39;Solicitud de productos&#39;,&#39;Créditos&#39;,&#39;Desembolsar Crediágil&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Desembolsar Crediágil
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_request_roc" onclick="onClickMenuItem(&#39;link_request_roc&#39;,&#39;/cbhttps://www.grupobancolombia.com/wps/portal/personas/solicitud-de-productos-wcm#/creditos&#39;,&#39;/cb&#39;,&#39;REQPROD&#39;,&#39;REQCRED&#39;,&#39;N&#39;,&#39;Solicitud de productos&#39;,&#39;Créditos&#39;,&#39;Otros Créditos&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Otros Créditos
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-12 col-md-12">
+										<li class="dropdown-header">
+											
+											Inversiones
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_request_fi" onclick="onClickMenuItem(&#39;link_request_fi&#39;,&#39;/cb/pages/jsp/funds/fundsOpeningCallable.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;FOPENING&#39;,&#39;N&#39;,&#39;Solicitud de productos&#39;,&#39;Inversiones&#39;,&#39;Fondo de inversión&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Fondo de inversión
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_request_iv" onclick="onClickMenuItem(&#39;link_request_iv&#39;,&#39;/cb/pages/jsp-ns/olb/VirtualInvestmentDataEntry&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;VIRTUALAPERTURA&#39;,&#39;N&#39;,&#39;Solicitud de productos&#39;,&#39;Inversiones&#39;,&#39;Inversión Virtual&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Inversión Virtual
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+						</ul>
+						
+						<ul class="col_menu col-sm-4 col-md-4">
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-12 col-md-12">
+										<li class="dropdown-header">
+											
+											Tarjetas
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_request_ep" onclick="onClickMenuItem(&#39;link_request_ep&#39;,&#39;/cb/pages/jsp/e-prepago/prePayRequestInvoke.jsp&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;EPAYSOLIC&#39;,&#39;N&#39;,&#39;Solicitud de productos&#39;,&#39;Tarjetas&#39;,&#39;e-Prepago&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												e-Prepago
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_request_ec" onclick="onClickMenuItem(&#39;link_request_ec&#39;,&#39;/cb/pages/jsp/ecard/newEcardInvoke.jsp?type=CARDS&#39;,&#39;/cb&#39;,&#39;PRODUCT&#39;,&#39;PROCTAPERTURAECARD&#39;,&#39;N&#39;,&#39;Solicitud de productos&#39;,&#39;Tarjetas&#39;,&#39;E-Card&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												E-Card
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_request_oc" onclick="onClickMenuItem(&#39;link_request_oc&#39;,&#39;/cbhttps://www.grupobancolombia.com/wps/portal/personas/solicitud-de-productos-wcm#/tarjetaCredito&#39;,&#39;/cb&#39;,&#39;REQPROD&#39;,&#39;OTHCARD&#39;,&#39;N&#39;,&#39;Solicitud de productos&#39;,&#39;Tarjetas&#39;,&#39;Otras Tarjetas&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Otras Tarjetas
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+						</ul>
+						
+						<ul class="col_menu col-sm-4 col-md-4">
+							
+							<li class="menu_item row">
+								
+									<ul class="second_level_menu col-sm-12 col-md-12">
+										<li class="dropdown-header">
+											
+											Seguros
+										</li>
+									
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_request_ex" onclick="onClickMenuItem(&#39;link_request_ex&#39;,&#39;/cbhttps://www.grupobancolombia.com/wps/portal/personas/productos-servicios/seguros/exequial/referido-seguro-exequial&#39;,&#39;/cb&#39;,&#39;REQPROD&#39;,&#39;EXEQ&#39;,&#39;N&#39;,&#39;Solicitud de productos&#39;,&#39;Seguros&#39;,&#39;Exequial&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Exequial
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_request_ic" onclick="onClickMenuItem(&#39;link_request_ic&#39;,&#39;/cbhttps://www.grupobancolombia.com/wps/portal/personas/productos-servicios/seguros/cobertura-integral/referido-cobertura-integral&#39;,&#39;/cb&#39;,&#39;REQPROD&#39;,&#39;INTCOV&#39;,&#39;N&#39;,&#39;Solicitud de productos&#39;,&#39;Seguros&#39;,&#39;Cobertura Integral&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Cobertura Integral
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_request_tlp" onclick="onClickMenuItem(&#39;link_request_tlp&#39;,&#39;/cbhttps://www.grupobancolombia.com/wps/portal/personas/productos-servicios/seguros/vida/total/referido-plan-vida-total&#39;,&#39;/cb&#39;,&#39;REQPROD&#39;,&#39;TOTLIFPLA&#39;,&#39;N&#39;,&#39;Solicitud de productos&#39;,&#39;Seguros&#39;,&#39;Plan Vida Total&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												Plan Vida Total
+											</a>
+										</li>
+								
+									
+										<li class="second_level_menu_item">
+											<a class="item_third_level_menu" id="link_request_soat" onclick="onClickMenuItem(&#39;link_request_soat&#39;,&#39;/cbhttps://www.suraenlinea.com/bancolombia/home&#39;,&#39;/cb&#39;,&#39;REQPROD&#39;,&#39;SOAT&#39;,&#39;N&#39;,&#39;Solicitud de productos&#39;,&#39;Seguros&#39;,&#39;SOAT&#39;);" data-toggle="dropdown" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												
+												SOAT
+											</a>
+										</li>
+								
+									
+									</ul>
+								
+							</li>
+							
+						</ul>
+						
+					</li>
+				</ul>				
+			</li>
+			
+			<li class="firt_level_menu">
+				<a id="loyalty" class="item_firt_level_menu item_firt_level" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" data-toggle="tab">
+					
+					Puntos Colombia
+			</a></li>
+			
+		</ul>
+	</div><!-- /.nav-collapse -->
+</div>
+
+<div id="banner">
+	
+
+
+<script type="text/javascript">  
+	console.log("Estado Banner: "+true);
+	
+   	function loadBanner(){   		
+   		try{
+	    	var url = context+"/pages/jsp-ns/olb/PreApprovedAction";
+	    	console.log("Banner Action");
+	    			    	
+	        if(url.lastIndexOf("cst")<0){
+	    		if(url.lastIndexOf("?")>=0){
+	    			url = url + '&'+getCstParam(); 
+	    		}else{
+	    			url = url + '?'+getCstParam(); 
+	    		}
+	    	}
+	        
+	        var promiseBanner = new Promise(
+	       		function (resolve, reject) {
+		            var xhr = new XMLHttpRequest;
+		            xhr.addEventListener("error", reject);
+		            xhr.addEventListener("load", resolve);
+		            xhr.open("GET", url, true);
+		            xhr.send(null);				   	     
+	  		});    			
+	 			
+	        promiseBanner.then(function(resolve){
+	        	var esVisible = $("#groupColumnDetail1").is(":visible");
+	        	if(!esVisible){
+	    			loadForm();
+	    			console.log("Inicia Flujo Banner");
+	        	}	
+	        }).catch(function(reject){});  	
+   		} catch (err) {
+      		console.log("Error Banner");
+		} 
+	}	
+
+    function loadForm() {
+    	var urlStringPre = context+"/pages/jsp/preapproved/invokeProductPreApproved.jsp";
+        ajaxRequestRenderInContainer(urlStringPre,"dynamicPreApprovedInfo",null); 
+        console.log("Banner Load Form");
+    }
+    
+</script>
+
+<div id="contenedorBanner" class="contenedor-banner" style="display:none">
+	<div id="separador1" class="separador-banner"></div>
+		<div id="bannerContainer" class="tab-content-banner">    
+			<div id="dynamicPreApprovedInfo">
+
+
+<table id="innerbanner" class="content-table-banner">
+    <tbody><tr class="content-tr">
+        <td class="content-td">
+            <label id="msgProductSelected" class="inner-message-banner"></label>
+        </td>
+        <td class="content-td">
+           <div class="content-td-button">
+            <button type="button" id="btnGoToPortal" class="btn btn-labeled btn-success btn-banner">Solicítalo aquí</button>                        
+            </div>
+        </td>
+    </tr>
+</tbody></table>
+<div id="portal" style="display:none"></div></div>	
+		</div>
+</div>
+<div id="bannerContainerError">	
+	
+</div>
+</div>
+<div class="col-sm-6 col-md-6 breadcrumbpad">
+	<ol id="breadcrumbId" class="breadcrumb dinamic_breadcrumb">
+		<!-- <li class="dinamic_breadcrumb_item"><a id="item_link_home" class="dinamic_breadcrumb_link" href="#">Inicio</a></li>-->
+	</ol>
+</div>
+		</div>
+		
+		<div id="content" class="content-in clear">
+		<div id="loading-cic" class="modal-backdrop fade in noshow-cic"></div>
+		<div id="content-notes" style="position: relative;">
+			<div class="main-left-container" id="menusecond"></div>
+			<div class="main-left-container" id="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+	<div class="gral-container" id="index-landing_page">
+        
+
+
+
+<div class="errpnl errpnlhide" id="tabMessage">
+	<div id="messageWarning">
+		
+		
+
+
+
+
+
+
+
+
+
+	<div class="advertenciaDiv">
+		<div class="divTextMessage">
+			<span class="icon-advertencia advertenciaIcon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+			<div class="advertenciaTitulo">
+				
+				Atención
+			</div>
+			<div class="advertenciaTexto">com.todo1.banking.util.struts.account.GetConsolidatedBalanceBancolombiaAction@deae51a</div>
+		</div>
+	</div>
+
+
+
+		
+	</div>
+</div>
+
+<div class="advertenciaDiv" id="tabMessage" style="display:none;">
+	<div class="divTextMessage">
+		<span class="icon-advertencia advertenciaIcon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+		<div class="advertenciaTitulo">
+			Atención
+		</div>
+		<div class="advertenciaTexto"></div>
+	</div>
+</div>
+
+
+		<div class="grid-container-main">			
+			<div id="categoriaRowF" class="row">
+			<div id="groupColumnDetail1" class="col-xs-7 col-sm-5 col-md-5">						
+				
+				<div class="panel_general">
+					<div class="title-panel-label">
+						<h1>Saldos por producto</h1>
+					</div>
+					<div id="gridProductID_home_container" class="styleHome grid-container-tablesp">
+					
+					<div>
+						<div>
+							<div class="Table ui-jqgrid-labels">
+								<div class="Cell panel_balances_styles panel_query_account_balances_left">
+							    <p>Tipo</p>
+							    </div>
+							    <div class="Cell panel_balances_styles panel_query_account_balances_center">
+							    <p>Número</p>
+							    </div>
+							    <div class="Cell panel_balances_styles panel_query_account_balances_right">
+							    <p>Saldo disponible</p>
+							    </div>
+							</div>
+						</div>
+					</div>									
+						
+						<div class="user-accordion" id="accordion">						
+						<!--Cuentas de ahorros y corriente -->
+						
+							<div id="panel_account_div" class="panel panel-default panel-menu" style="border-width: 0px 0px 1px; border-top-style: initial; border-right-style: initial; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-bottom-color: rgb(226, 233, 235); border-left-color: initial; border-image: initial; border-radius: 0px; display: block; margin-bottom: 0px !important;">
+						
+						
+							
+								<div id="panelHeading01" class="panel-heading" style="background-color: #FFFFFF !important;">
+									<h4 class="panel-title no-padding">
+										<a data-toggle="collapse" data-parent="#accordion" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" id="data_account_option" class="collapsed panel_account_href billsCredits_Items">
+											<span class="left-div panel_payments_href_credits">Cuentas de ahorros y corriente</span>
+											<span id="left-arrow-account" class="right-div ui-grid-ico-sort ui-icon-desc ui-icon ui-icon-triangle-1-s ui-sort-ltr none" style="margin-top: 0px !important;"></span>
+											<span id="down-arrow-account" class="right-div ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr show" style="margin-top: 0px !important;"></span>
+										</a>
+									</h4>
+								</div>
+								<div id="panel_account_option" class="panel-collapse collapse in" style="height: auto; font-family: Arimo !important;">
+																			
+								<div id="container_account"><div class="Table"><div class="Row landing-cursor" id="accaccount0"><div class="Cell panel_query_account_balances_left"><p>Ahorros</p></div><div class="Cell panel_query_account_balances_center"><p><span>769-468830-22</span><span id="numACCaccount" style="display:none;">CA_384523441501100</span></p></div><div class="Cell panel_query_account_balances_right"><p>$ 1,685.72</p></div></div></div></div></div>
+							
+							
+							</div>							
+							
+							<!--Tarjetas de credito  -->
+												
+							<div id="panel_cards_div" class="panel panel-default panel-menu" style="margin-bottom: 0px !important; border: 0; border-radius: 0px; display: block;">
+						
+						
+								<div id="panelHeading02" class="panel-heading" style="background-color: #FFFFFF !important;">
+									<h4 class="panel-title no-padding">
+										<a data-toggle="collapse" data-parent="#accordion" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" id="date_cards_option" class="collapsed panel_cards_href billsCredits_Items">
+											<span class="left-div panel_payments_href_credits">Tarjetas de crédito</span>
+											<span id="left-arrow-cards" class="right-div ui-grid-ico-sort ui-icon-desc ui-icon ui-icon-triangle-1-s ui-sort-ltr show" style="margin-top: 0px !important;"></span>
+											<span id="down-arrow-cards" class="right-div ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr none" style="margin-top: 0px !important;"></span>
+										</a>
+									</h4>
+								</div>
+								<div id="panel_cards_option" class="panel-collapse collapse" style="height: 0px;font-family:Arimo !important;">
+									<div id="container_cards_option"></div>										
+										
+								</div>
+							</div>							
+							
+						<!--Creditos  -->	
+						
+						
+							<div id="panel_othercredits_div" class="panel panel-default panel-menu" style="margin-bottom: 0px !important; border: 0; border-radius: 0px; display: none;">
+						
+								<div id="panelHeading03" class="panel-heading" style="background-color: #FFFFFF !important;">
+									<h4 class="panel-title no-padding">
+										<a data-toggle="collapse" data-parent="#accordion" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" id="date_othercredits_option" class="collapsed panel_othercredits_href billsCredits_Items">
+											<span class="left-div panel_payments_href_credits"></span>
+											<span id="left-arrow-othercredits" class="right-div ui-grid-ico-sort ui-icon-desc ui-icon ui-icon-triangle-1-s ui-sort-ltr show" style="margin-top: 0px !important;"></span>
+											<span id="down-arrow-othercredits" class="right-div ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr none" style="margin-top: 0px !important;"></span>
+										</a>
+									</h4>
+								</div>
+								<div id="panel_othercredits_option" class="panel-collapse collapse" style="height: 0px; font-family: Arimo !important;">
+									<div id="container_othercredits_option"></div>
+								</div>
+							</div>
+							
+							<!--Inversiones  -->
+						
+						
+							<div id="panel_invest_div" class="panel panel-default panel-menu" style="margin-bottom: 0px !important; border: 0; border-radius: 0px; display: none;">
+						
+								<div id="panelHeading04" class="panel-heading" style="background-color: #FFFFFF !important;">
+									<h4 class="panel-title no-padding">
+										<a data-toggle="collapse" data-parent="#accordion" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" id="date_invest_option" class="collapsed panel_invest_href billsCredits_Items">
+											<span class="left-div panel_payments_href_credits"></span>
+											<span id="left-arrow-invest" class="right-div ui-grid-ico-sort ui-icon-desc ui-icon ui-icon-triangle-1-s ui-sort-ltr show" style="margin-top: 0px !important;"></span>
+											<span id="down-arrow-invest" class="right-div ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr none" style="margin-top: 0px !important;"></span>
+										</a>
+									</h4>
+								</div>
+								<div id="panel_invest_option" class="panel-collapse collapse" style="height: 0px; font-family: Arimo !important;">
+									<div id="container_invest_option"></div>									
+								</div>
+							</div>		
+						</div>						
+						
+						
+						
+					</div>
+				</div>
+			</div>
+			<input type="hidden" value="" id="selected_account_id">
+			<div class="col-xs-5 col-sm-7 col-md-7" id="general-detail-container">
+				<div class="errorDiv" id="tabErrorDetail" style="display:none">
+					<div class="divTextMessage">
+						<span class="icon-error errorIcon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+						<div class="errorTitulo">
+							Error
+						</div>
+						<div class="errorTexto" id="summary-general-detail-error">Error</div>
+					</div>
+				</div>				
+				<div id="detail_container_home" class="grid-container-table show" style="min-height:140px;display: none">					
+					<div id="outer" class="outer-ellipsis-message_home">
+						<div class="popover right inner-ellipsis-message_home"><div id="leftDetailArrow" class="arrow"></div>
+						Selecciona un producto para ver los últimos movimientos
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		
+
+
+<div class="grid-container-main" style="padding-top:20px;">
+	<div id="categoriaRowG" class="row">
+		<div class="col-xs-7 col-sm-5 col-md-5" id="payment-container-id">
+			<div class="panel_general">
+				<div class="title-panel-label">
+					<h1>Consulta de pagos</h1>
+				</div>
+				<div class="subtitle-land-label">
+					<h4>Ver la fecha de sus próximos pagos</h4>
+				</div>
+				<div class="user-accordion" id="accordion">
+					<div class="panel panel-default panel-menu" style="margin-bottom: 0px !important; border: 0; margin-top: 1px;">
+						<div id="panelHeading20" class="panel-heading" style="background-color: #FFFFFF !important;">
+							<h4 class="panel-title no-padding">
+								<a data-toggle="collapse" data-parent="#accordion" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" id="date_creditcard_option" class="panel_payments_href billsCredits_Items">
+									<span class="left-div panel_payments_href_credits panel_payments_href_credits">Tarjetas de crédito</span>
+									<span id="left-arrow-creditcard" class="right-div ui-grid-ico-sort ui-icon-desc ui-icon ui-icon-triangle-1-s ui-sort-ltr none" style="margin-top: 0px !important;"></span>
+									<span id="down-arrow-creditcard" class="right-div ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr show" style="margin-top: 0px !important;"></span>
+								</a>
+							</h4>
+						</div>
+
+						<div id="panel_creditcard_option" class="panel-collapse collapse in" style="height: auto; font-family: Arimo !important;">
+							
+						<div id="container_creditcard_option"><div class="Table"><div class="Row landing-cursor" id="paycreditcard0"><div class="Cell panel_query_account_grid_left"><p>Tarjeta de Crédito ****7228</p></div><div class="Cell panel_query_account_grid_center"><p><span>3 Octubre</span></p></div><div class="Cell panel_query_account_grid_right"><p><a href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" class="panel_query_account_grid_right_pay">Pagar</a></p></div></div><div class="Row landing-cursor-det" id="paycreditcard1"><div class="Cell panel_query_account_grid_left"><p>Tarjeta de Crédito ****5709</p></div><div class="Cell panel_query_account_grid_center"><p><span> </span></p></div><div class="Cell panel_query_account_grid_right"><p></p></div></div></div></div></div>
+
+					</div>
+					<div class="panel panel-default panel-menu" style="margin-bottom: 0px !important; border: 0; border-top: 1px solid #e2e9eb;">
+						<div id="panelHeading30" class="panel-heading" style="background-color: #FFFFFF !important;">
+							<h4 class="panel-title no-padding">
+								<a data-toggle="collapse" data-parent="#accordion" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" id="date_credits_option" class="panel_payments_href billsCredits_Items">
+									<span class="left-div panel_payments_href_credits">Créditos</span>
+									<span id="left-arrow-credits" class="right-div ui-grid-ico-sort ui-icon-desc ui-icon ui-icon-triangle-1-s ui-sort-ltr none" style="margin-top: 0px !important;"></span>
+									<span id="down-arrow-credits" class="right-div ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr show" style="margin-top: 0px !important;"></span>
+								</a>
+							</h4>
+						</div>
+						<div id="panel_credits_option" class="panel-collapse collapse in" style="height: auto; font-family: Arimo !important;">
+							
+						<div id="container_credits_option"><div id="hiddenSummary_credits" class="informativoDiv"><div class="divTextMessage"><span class="icon-informacion informativoIcon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span><div class="informativoTitulo">Información</div><div class="informativoTexto">Usted no tiene Créditos. Si desea solicitar alguno, ingrese <a href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" onclick="openPopUp(&#39;http://www.bancolombia.com/aunclic/&#39;);">aquí</a>.</div></div></div></div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="messageCenterLandingBox" class="col-xs-5 col-sm-7 col-md-7 " style="height:auto;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="tabErrorCICLanding" class="grid-container-table-right panel_general" style="display:none;">
+	<div class="title-panel-label">
+		<h1 class="title-land-label">Mis mensajes</h1>
+	</div>
+	<div class="errorDiv" id="tabErrorCICLandingDIV">
+		<div class="divTextMessage">
+			<span class="icon-error errorIcon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+			<div class="errorTitulo">
+				Error
+			</div>
+			<div class="errorTexto" id="summary">
+				En este momento no podemos procesar la transacción, por favor intente más tarde.
+			</div>
+		</div>	
+	</div>
+</div>
+<div id="messageCenterLanding" class="grid-container-table-right panel_general" style="height: auto; display: inline-block;">
+		<span id="numMessages" class="messagecenter-count-index" style="display:none">0</span>
+		<div id="bgNumMessages" class="icon-indicador-mensajes-index" style="display:none"></div>
+		
+		
+			
+		
+		<div class="title-panel-label">
+			<h1 class="title-land-label">Mis mensajes</h1>
+		</div>
+		<div id="gridMessages">
+			<div id="gridMessagesLanding_container" class="styleHome grid-container-tablesp">
+				<div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_gridMessagesLanding" dir="ltr" style="width: 491px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_gridMessagesLanding"></div><div class="loading ui-state-default ui-state-active" id="load_gridMessagesLanding">Cargando...</div><div class="ui-jqgrid-view" id="gview_gridMessagesLanding" style="width: 491px;"><div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix" style="display: none;"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title"></span></div><div class="ui-state-default ui-jqgrid-hdiv" style="width: 491px;"><div class="ui-jqgrid-hbox"><table class="ui-jqgrid-htable" style="width: 491px;" role="grid" aria-labelledby="gbox_gridMessagesLanding" cellspacing="0" cellpadding="0" border="0"><thead><tr class="ui-jqgrid-labels" role="rowheader"><th id="gridMessagesLanding_subject" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 368px;"><div id="jqgh_gridMessagesLanding_subject" class="ui-jqgrid-sortable" style="cursor: default;">Asunto<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="gridMessagesLanding_receptionDate" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 123px;"><div id="jqgh_gridMessagesLanding_receptionDate" class="ui-jqgrid-sortable">Recibido<span class="s-ico" style=""><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th></tr></thead></table></div></div><div class="ui-jqgrid-bdiv" style="height: auto; width: 491px;"><div style="position:relative;"><div></div><table id="gridMessagesLanding" class="ui-jqgrid-btable" cellpadding="0" cellspacing="0" style="margin: 10px 0px 0px; width: 491px;" tabindex="1" border="0" role="grid" aria-multiselectable="false" aria-labelledby="gbox_gridMessagesLanding"><tbody><tr class="jqgfirstrow" role="row" style="height:auto"><td role="gridcell" style="height: 0px; width: 368px;"></td><td role="gridcell" style="height: 0px; width: 123px;"></td></tr></tbody></table></div></div></div><div class="ui-jqgrid-resize-mark" id="rs_mgridMessagesLanding">&nbsp;</div></div>
+
+
+
+			<div id="emptyMessage" class="gral-subtitle divEmptyMessageMenuLoading" style="display: inline-block;">
+				En este momento, usted no tiene mensajes.
+			</div>
+			
+			
+		</div>
+	</div>
+	<div id="panelVerMensajes" class="panel panel-default panel-menu" style="border-width: 0px; border-style: solid; border-color: rgb(226, 233, 235); width: 100%; margin-bottom: 0px !important; display: none;">
+		<div id="panelHeading30" class="panel-heading panel_ending" style="background-color: #FFFFFF !important;  height:100%;">
+			<h4 class="panel-title no-padding">
+				<div>
+					<a data-toggle="collapse" data-parent="#accordion" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" onclick="redirectToMessageCenter()" id="message_center_option" class="panel_message_center collapsed panel_payments_href">
+						<span><i id="left-arrow-credits" class="glyphicon icon-arrow-right2 leftarrow_icon show"></i>
+						<i id="down-arrow-credits" class="down-arrow-svp none"></i></span>
+						Ver más mensajes</a>
+				</div>
+			</h4>
+		</div>
+		<div id="panel_credits_option" class="panel-collapse collapse" style="height: 0px;">
+			<div id="container_credits_option"></div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+</div>
+	</div>
+</div>
+
+	</div>
+</div>
+			<div id="dvLoading"></div>
+		</div>
+			
+			
+			<div class="main-right-menu">
+				<div class="panel-group user-accordion" id="accordion">
+					
+					<div class="panel_general panel-menu">
+						<div id="panelHeading4" class="title-panel-label">
+							<h4 class="panel-title no-padding"> 
+								<a data-toggle="collapse" data-parent="#accordion" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#collapseFour" class="collapsed">Accesos rápidos</a>
+							</h4>
+						</div>
+						<div id="collapseFour" class="panel-collapse collapse in">
+							<div>
+								<div class="contect_FastAccess">
+										<div class="row">
+										<div class="col-xs-10 col-md-10 col-sm-12">
+											<a id="link_Transf_cBancolombia" class="contect_FastAccess_Item" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												<div class="glyphicon icon-icono_transferencias contect_FastAccess_icon"></div>
+												<div class="contect_FastAccess_Text">Transferencias a cuentas Bancolombia</div>
+											</a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-10 col-md-10 col-sm-12">
+											<a id="link_payments_bills1" class="contect_FastAccess_Item" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#">
+												<div class="glyphicon icon-icono_pagar contect_FastAccess_icon" style="top:0px;"></div>
+												<div class="contect_FastAccess_Text_One">Pagar facturas</div>
+											</a>
+										</div>
+									</div>
+
+								</div>								
+							</div>
+						</div>
+					</div>
+					<div id="panelMisMensajes" class="panel_general panel-menu" style="display:none">
+					<span id="numMessages" class="messagecenter-count" style="display:none"></span>
+					<div id="bgNumMessages" class="icon-indicador-mensajes" style="display:none"></div>
+						<div id="panelHeading1" class="title-panel-label">
+							<h4 class="panel-title no-padding">
+								<a data-toggle="collapse" data-parent="#accordion" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#collapseOne" class="collapsed" style="font-size:17px;">Mis mensajes</a>
+								
+							</h4>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse in">
+							<div>
+								<div id="messajeCenterMenu">
+									
+								</div>								
+							</div>
+						</div>
+					</div>
+					<!--banner-->
+					<div id="anuncio-0" class="gc-cursor gc-banner" style="position:relative; overflow: hidden;">  <iframe style="width: 100%; height: 100%; overflow: hidden;" id="anuncio-0-iframe" src="./saved_resource.html"></iframe>  <div id="rmt-anuncio-0" style="position: absolute; background: black; opacity: 0.6; text-align: center; display: block;" class="gc-icons gc-icon-rmt">    <a style="font-family: Sans-serif; color: white; text-decoration: none;" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" id="rmt-lnk-anuncio-0">      <img src="./clock.png" id="rmt-img-anuncio-0" class="gc-imgs gc-img-rmt" title="Recordar más tarde" style="opacity: 1;">    </a>  </div>  <div id="ddv-anuncio-0" style="position: absolute; background: black; opacity: 0.6; text-align: center; display: block; left: 50px;" class="gc-icons gc-icon-ddv">    <a style="font-family: Sans-serif; color: white; text-decoration: none;" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" id="ddv-lnk-anuncio-0">      <img src="./eyec.png" id="ddv-img-anuncio-0" class="gc-imgs gc-img-ddv" title="Dejar de ver" style="opacity: 1;">    </a>  </div>  <div id="l-anuncio-0" style="position: absolute; background: black; opacity:0.6; text-align: center;" class="gc-icons gc-icon-l">    <a style="font-family: Sans-serif; color: white; text-decoration: none;" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" id="l-lnk-anuncio-0">      <img src="./like.png" id="l-img-anuncio-0" class="gc-imgs gc-img-l" title="Me gusta" style="opacity: 1;">    </a>  </div>  <div id="nl-anuncio-0" style="position: absolute; background: black; opacity:0.6; text-align: center;" class="gc-icons gc-icon-nl">    <a style="font-family: Sans-serif; color: white; text-decoration: none;" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#" id="nl-lnk-anuncio-0">      <img src="./nolike.png" id="nl-img-anuncio-0" class="gc-imgs gc-img-nl" title="No me gusta" style="opacity: 1;">    </a>  </div></div>
+					
+					<!--popup-->
+					<div id="anuncio-1" class="gc-cursor" style="display:none" gc-popup-width="400" gc-popup-height="600">
+						
+						
+						{						
+							"uId": "zscLMDnDSla5sw8WajAOjZR8TravlOhW0zSi7AWkVb4%3D",
+							"aId": "Q4caTqJZzkCOkZhgJ5%2Bk968j8AADAwZPjmkvtjF8o5c%3D",
+							 
+								"popup": "true",
+  								"cssLink": "/web/css/Bancolombia/style_bancolombia_rx.css",
+							
+							
+							 
+								"clientId": "BCSVP",
+								"token": "true"
+							
+						}
+					</div>
+					<div class="panel panel-default panel-menu" style="display:none;">
+						<div id="panelHeading2" class="panel-heading">
+							<h4 class="panel-title no-padding">
+								
+								<a data-toggle="collapse" data-parent="#accordion" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#collapseTwo" class="collapsed">Solicitud de productos</a>
+							</h4>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse" style="height: 0px;">
+							<div class="panel-body">
+								<div class="panel-option">
+									<div class="left-arrow"></div>
+									<div class="panel-label"><a class="menu-lateral-link">Chat<span class="chat-icon"></span></a></div>
+								</div>
+								<div class="panel-option">
+									<div class="left-arrow"></div>
+									<div class="panel-label"><a class="menu-lateral-link">Llámenos<span class="llamenos-icon"></span></a></div>
+								</div>
+								<div class="panel-option">
+									<div class="left-arrow"></div>
+									<div class="panel-label"><a class="menu-lateral-link">Te llamamos<span class="tellamamos-icon"></span></a></div>
+								</div>
+							</div>
+						</div>	
+					</div>
+					<div class="panel panel-default panel-menu" style="display:none;">
+						<div id="panelHeading3" class="panel-heading">
+							<h4 class="panel-title no-padding">
+								<a data-toggle="collapse" data-parent="#accordion" href="https://sucursalpersonas.transaccionesbancolombia.com/cb/pages/jsp/home/index.jsp#collapseThree" class="collapsed">Ayudas</a>
+							</h4>
+						</div>
+						<div id="collapseThree" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="panel-option">
+									<div class="left-arrow"></div>
+									<div class="panel-label"><a class="menu-lateral-link">Ayudas Técnicas</a></div>
+								</div>
+								<div class="panel-option">
+									<div class="left-arrow"></div>
+									<div class="panel-label"><a class="menu-lateral-link">Preguntas Frecuentes</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="footer">
+			<div class="title-text pull-left"> Dirección IP:186.145.41.60 </div>
+			<div class="title-text pull-right" data-html2canvas-ignore="true"> Copyright © 2018 Bancolombia S.A.</div>
+		</div>
+		<div id="numregiframe" style="width:0px;height:0px;border:0;"></div>
+		<input type="hidden" id="isForceAuthenticated" name="isForceAuthenticated" value="true">
+		<input type="hidden" id="isCM_CIC_Menu_loaded" name="isCM_CIC_Menu_loaded" value="false">
+		<div id="dvBlockPage" style="display:none;" class="ui-widget-overlay ui-front"></div>
+		<div id="logoutForceDIV" style="display:none;">
+			<iframe id="MESSAGE_CENTER_LOGOUT" name="MESSAGE_CENTER_LOGOUT" src="./saved_resource(1).html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+			<form name="forwardCMLOGOUT" method="post" target="MESSAGE_CENTER_LOGOUT">
+			</form>
+		</div>
+		
+		<script src="./jquery.smartmenus.js"></script>
+		<script src="./jquery.smartmenus.bootstrap.js"></script>
+		<script src="./megaMenu.js"></script>
+
+		
+		
+			<script src="./gc-config.js"></script>
+			<script src="./gc-util.js"></script>
+		
+	
+	
+</body></html>

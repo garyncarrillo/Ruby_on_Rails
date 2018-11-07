@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	   <title>Sucursal Virtual Cootracom</title>
+	   <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+	   <link type="text/css" rel="stylesheet" media="all" href="./menu.css">
+	    <script type="text/javascript" src="jquery-3.3.1.js"></script>	
+    </head>
+
+	 <script type="text/javascript">
+				$(document).ready(function(){
+     					$( ".submenu" ).click(function() {	
+							$(this).children("ul").slideToggle(); //Mostrar u ocultar el submenu
+						});
+
+
+     					//Perifl del Usuario
+						$( "#perfil" ).click(function() {
+								$('#frame').attr('src','perfil.html');
+
+						});
+
+					
+
+						// Menu principal
+						$( "#inicio" ).click(function() {
+								$('#frame').attr('src','saldo.html');
+						});
+
+
+						// Menu Productos
+						//Sub-menu
+						$( "#sub-aportes" ).click(function() {
+								$('#frame').attr('src','aportes.html');
+						});
+
+				});
+	 </script>
+
+
+
+<body>
+ <div class="Div-principal">
+
+	<div>
+		<header2>
+			<nav class="cabecera">
+				<ul>
+					<li><a>Salir</a></li>
+				</ul>
+			</nav>
+		</header2>
+	</div>
+	<div class="sucursal">
+		<div class ="sucursal-vitual">
+			<h>Surcursal Virtual Personal</h>
+		</div>
+	</div>
+
+	<div class="afiliado">
+	    <nav>
+		  <ul>
+		     <h> GARYN JAIRO CARRILLO CABALLERO</h>
+		  <ul>
+		 </nav>
+	</div>
+
+	<div>
+		<header2 class="cab3">
+			<input type="checkbox" id="cmenu-actualizar">
+		    <label for="cmenu-actualizar" >Actualizar </label>
+			<nav class="menu-actualizar">
+				<ul>
+					<li id="perfil" name= "perfil" ><a>Perfil</a></li>
+				</ul>
+				<ul>
+					<li><a>Notificaciones</a></li>
+				</ul>
+			</nav>
+		</header2>
+	</div>
+
+
+    <header>
+		<input type="checkbox" id="btn-menu">
+		<label for="btn-menu" ><img src="ico-menu.svg" width="25" height="25" viewBox="0 0 300 90"> </label>
+		<div class="menu"> 
+		 <nav >
+		 	<ul>
+		 		<li id="inicio" name="inicio" ><a href="#">Inicio</a></li>
+		 		<li class="submenu" ><a href="#">Documentos</a>
+		 			<ul>
+		 				<li class="sub-li" ><a href="">Certificado de afiliacion</a></li>
+		 				<li class="sub-li" ><a href="">Reporte DIAN</a></li>
+		 				<li class="sub-li" ><a href="">Extracto de aportes</a></li>
+		 			</ul>	
+		 		</li>
+		 		<li class="submenu" ><a>Productos</a>
+		 			<ul>
+		 				<li class="sub-li" id="sub-aportes" name="sub-aportes" ><a>Listado de Aportes</a></li>
+		 				<li class="sub-li" id="sub-creditos"><a>Creditos</a></li>
+		 				<li class="sub-li" id="sub-codeudor"><a>Codeudor</a></li>
+		 			</ul>	
+		 		</li>
+		 		<li><a href="#">Otros</a></li>
+		 		<li><a href="#">Seguridad</a></li>
+		
+		 	</ul>
+		 </nav>
+		 </div>
+    </header>
+ </div style="width:100%; height: 500%;">
+	<iframe  id="frame" name="frame" class="Div-principal" height="630px" width="93%" frameborder="0" src="saldo.html">
+		
+	</iframe> 
+ <div>
+ 	
+
+
+
+ </div>
+
+</body>
+</html>
