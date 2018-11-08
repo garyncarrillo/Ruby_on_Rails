@@ -14,6 +14,7 @@
 							$(this).children("ul").slideToggle(); //Mostrar u ocultar el submenu
 						});
 
+     				
 
      					//Perifl del Usuario
 						$( "#perfil" ).click(function() {
@@ -31,15 +32,15 @@
 
 						// Menu Productos
 						//Sub-menu
-						$( "#sub-aportes" ).click(function() {
+						$( "#sub-web-aportes" ).click(function() {
 								$('#frame').attr('src','aportes.html');
 						});
 												//Sub-menu
-						$( "#sub-creditos" ).click(function() {
+						$( "#sub-web-creditos" ).click(function() {
 								$('#frame').attr('src','creditos.html');
 						});
 
-						$( "#sub-codeudor" ).click(function() {
+						$( "#sub-web-codeudor" ).click(function() {
 								$('#frame').attr('src','codeudor.html');
 						});
 
@@ -100,18 +101,18 @@
 			 <nav >
 			 	<ul>
 			 		<li id="inicio" name="inicio" ><a href="#">Inicio</a></li>
-			 		<li  ><a href="#">Documentos</a>
+			 		<li ><a href="#">Documentos</a>
 			 			<ul>
-			 				<li class="sub-li" ><a href="">Certificado de afiliacion</a></li>
-			 				<li class="sub-li" ><a href="">Reporte DIAN</a></li>
-			 				<li class="sub-li" ><a href="">Extracto de aportes</a></li>
+			 				<li  class="sub-li" id="sub-web-c-afiliacion"><a href="">Certificado de afiliacion</a></li>
+			 				<li  class="sub-li" id="sub-web-r-DIAN"><a href="">Reporte DIAN</a></li>
+			 				<li class="sub-li" id="sub-web-e-aportes" ><a href="">Extracto de aportes</a></li>
 			 			</ul>	
 			 		</li>
-			 		<li class="submenu" ><a>Productos</a>
+			 		<li ><a>Productos</a>
 			 			<ul>
-			 				<li class="sub-li" id="sub-aportes" name="sub-aportes" ><a>Listado de Aportes</a></li>
-			 				<li class="sub-li" id="sub-creditos"><a>Creditos</a></li>
-			 				<li class="sub-li" id="sub-codeudor"><a>Codeudor</a></li>
+			 				<li  class="sub-li" id="sub-web-aportes"><a>Listado de Aportes</a></li>
+			 				<li  class="sub-li" id="sub-web-creditos"><a>Creditos</a></li>
+			 				<li class="sub-li"  id="sub-web-codeudor"><a >Codeudor</a></li>
 			 			</ul>	
 			 		</li>
 			 		<li><a href="#">Otros</a></li>
@@ -125,18 +126,18 @@
 			 <nav >
 			 	<ul>
 			 		<li id="inicio" name="inicio" ><a href="#">Inicio</a></li>
-			 		<li  ><a href="#">Documentos</a>
+			 		<li class="submenu" ><a>Documentos</a>
 			 			<ul>
-			 				<li class="sub-li" ><a href="">Certificado de afiliacion</a></li>
-			 				<li class="sub-li" ><a href="">Reporte DIAN</a></li>
-			 				<li class="sub-li" ><a href="">Extracto de aportes</a></li>
+			 				<li class="sub-li" id="sub-mov-aportes"><a>Listado de Aportes</a></li>
+			 				<li class="sub-li" id="sub-mov-creditos"><a>Creditos</a></li>
+			 				<li class="sub-li" id="sub-mov-codeudor"><a>Codeudor</a></li>
 			 			</ul>	
 			 		</li>
 			 		<li class="submenu" ><a>Productos</a>
 			 			<ul>
-			 				<li class="sub-li" id="sub-aportes" name="sub-aportes" ><a>Listado de Aportes</a></li>
-			 				<li class="sub-li" id="sub-creditos"><a>Creditos</a></li>
-			 				<li class="sub-li" id="sub-codeudor"><a>Codeudor</a></li>
+			 				<li class="sub-li" id="sub-mov-aportes"><a>Listado de Aportes</a></li>
+			 				<li class="sub-li" id="sub-mov-creditos"><a>Creditos</a></li>
+			 				<li class="sub-li" id="sub-mov-codeudor"><a>Codeudor</a></li>
 			 			</ul>	
 			 		</li>
 			 		<li><a href="#">Otros</a></li>
