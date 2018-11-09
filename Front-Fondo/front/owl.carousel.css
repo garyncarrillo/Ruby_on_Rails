@@ -1,7 +1,4 @@
-/* Previsualizaion de imagenes */
-/* http://www.landmarkmlp.com/js-plugin/owl.carousel/demos/autoHeight.html */
-
-
+/* 
  * 	Core Owl Carousel CSS File
  *	v1.23
  */
@@ -219,3 +216,4 @@
 @keyframes scaleUpTo {
   to { opacity: 0; transform: scale(1.5); }
 }
+
