@@ -91,7 +91,7 @@
         padding: 0px;
         margin: 0px;
         width: 98%;
-        height: 60%;
+        height: 70%;
         position: absolute;
      
     }
@@ -160,24 +160,28 @@ box-shadow: 9px -11px 49px -4px rgba(36,66,110,1);
 
 
 .div-contactanos{
-        top: 150%;
+        top: 170%;
         padding: 0px;
         margin: 0px;
         width: 98%;
         height: 100%;
         position: absolute;
-        border: solid red;
+      
 }
 
 .contenerdor-contactanos-interior{
+        font-family: "Open Sans",sans-serif;
         top: 150%;
         padding: 0px;
         margin: 0px;
         width: 98%;
         height: 60%;
-        vertical-align:top;
+       
 }
-
+.contenerdor-contactanos-interior li{
+    padding: 10px 40px 60px 50px;
+    list-style: none;
+}
  .cajas-redondas {
    border-radius: 5px;
  }
