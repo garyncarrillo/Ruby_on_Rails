@@ -1,0 +1,138 @@
+
+   /* Archivosd CSS -->
+    <!--- http://www.landmarkmlp.com/js-plugin/owl.carousel/demos/autoHeight.html */
+
+
+
+/* Ejemplo para imagen de eventos 
+    https://www.selva3d.com/ 
+*/
+
+.cabecera{
+    position: fixed;
+    /*background: #52c0cb;*/
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 10%;
+    width:100%; 
+    padding:3px;
+}
+
+.cabecera-logo-mobil{
+    width:245px; 
+    float:left; 
+    position: absolute;  
+    left: 5%;
+    top: 15%;
+}
+
+.cabecera-logo-mobil a{
+    font-family: "Open Sans",sans-serif;
+    color:rgba(255, 255, 255, 1)
+}
+
+
+
+.cabecera-menu-web{
+    width:70%;  
+    float:right; 
+    position: absolute;  
+    top: 10%; 
+    left: 50%;
+ 
+}
+
+
+.cabecera-menu-web ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    /* convertir en caja flexible y de e forma horizontal*/
+    display: flex;
+    /* posicion del menu de forma horizontal*/
+    flex-direction: row;
+
+    /* para centrar el texto sobre la barra
+    justify-content: center; */
+}
+
+.cabecera-menu-web li{
+    /*text-align: center;*/
+
+    /* centrar texto 
+    flex-grow: 1; */
+}
+
+.cabecera-menu-web li:hover a{
+    cursor: pointer;
+    /* Efecto sombreado sobre el menu */
+    text-decoration: underline white;
+}
+
+.cabecera-menu-web li a{
+    font-family: "Open Sans",sans-serif;
+    display: block;
+    /* separacion vertical y horizontal de menu */
+    padding: 10px 20px;
+    color: #fff;
+    /*quita la linea de link del texto*/
+    text-decoration: none;
+}
+
+.carrusel-imagen{
+    background-image: url("http://placehold.it/1170x400/42bdc2/FFFFFF" );
+    width: 100%;
+    background-attachment: fixed;
+}
+
+
+#cuerpo{
+        top: 75%;
+        padding: 0px;
+        margin: 0px;
+        width: 95%;
+        height: 50%;
+        position: absolute;
+        border: solid;
+    }
+#izquierda{
+        padding: 0px;
+        margin: 0px;
+        width: 20%;
+        height: 100%;
+        background-color: #d0cece;
+        float: left;
+        border: solid;
+    }
+#centro{
+        padding: 0px;
+        margin: 0px;
+        width: 40%;
+        height: 100%;
+        float: center;
+        background-color: #ffffff; 
+        border: solid;            
+    }
+#derecha{
+        padding: 0px;
+        margin: 0px;
+        width: 30px;
+        height: 100%;
+        background-color: #d0cece;             
+        float: right;
+        border: solid;
+
+    }
+
+.div-servicios{
+
+}
+
+.div-conocenos{
+
+}
+
+.div-contactanos{
+
+}
