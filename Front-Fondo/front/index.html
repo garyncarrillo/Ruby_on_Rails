@@ -13,7 +13,23 @@
 
     <link href="redes.css" rel="stylesheet">
 
-	
+	<style type="text/css">
+		img.zoom {
+		    width: 350px;
+		    height: 700px;
+		    -webkit-transition: all .2s ease-in-out;
+		    -moz-transition: all .2s ease-in-out;
+		    -o-transition: all .2s ease-in-out;
+		    -ms-transition: all .2s ease-in-out;
+		}
+ 
+		.transition {
+		    -webkit-transform: scale(1.8); 
+		    -moz-transform: scale(1.8);
+		    -o-transform: scale(1.8);
+		    transform: scale(1.8);
+		}
+	</style>
 </head>
 
 <script type="text/javascript">
@@ -25,7 +41,13 @@
 
 
 	$(document).ready(function() {
- 
+ 			   $('.zoom').hover(function() {
+       				 $(this).addClass('transition');
+    			}, function() {
+     			   $(this).removeClass('transition');
+   				 });	
+
+
 			  $("#owl-demo").owlCarousel({
 					    autoPlay : 3000,
 					    stopOnHover : true,
@@ -83,9 +105,13 @@
 				          <div class="span12" >
 
 				            <div id="owl-demo" class="owl-carousel" >
-
-				                <div ><img src="http://placehold.it/1170x400/42bdc2/FFFFFF" style="width: 100%;"></div>
-				              <div ><img src="http://placehold.it/1170x400/42bdc2/FFFFFF" style="width: 100%;"></div>
+				            	<div ><img src="navidad2.jpg" height="700px" style="width: 100%;" ></div>
+				            	<div ><img src="navidad.jpg" height="700px" style="width: 100%;" ></div>
+				            	<div ><img src="https://s3.amazonaws.com/StartupStockPhotos/20140808_StartupStockPhotos/76.jpg" height="700px" style="width: 100%;" ></div>
+				            	 <div ><img src="https://s3-us-west-1.amazonaws.com/realisticshots/157.jpg" height="700px" style="width: 100%;" class="zoom"></div>
+   								<div ><img src="https://s3-us-west-1.amazonaws.com/realisticshots/3rd-week/000025.jpg" height="700px" style="width: 100%;"  ></div>
+				                <div ><img src="https://s3-us-west-1.amazonaws.com/realisticshots/50.jpg" height="700px" style="width: 100%;"></div>
+				             
 				          
 				            </div>
 
