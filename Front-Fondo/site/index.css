@@ -1,0 +1,479 @@
+
+/* Archivosd CSS  carrusel de evento -->
+<!--- http://www.landmarkmlp.com/js-plugin/owl.carousel/demos/autoHeight.html */
+
+/*  Efecto hover para bottones y cajas de texto */
+/* http://ianlunn.github.io/Hover/#effects */
+
+/* Ejemplo para imagen de eventos 
+    https://www.selva3d.com/ 
+*/
+
+.cabecera{
+    position: fixed;
+    /*background: #52c0cb;*/
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 10%;
+    width:100%; 
+    padding:3px;
+}
+
+.cabecera-logo-mobil{
+    width:245px; 
+    float:left; 
+    position: absolute;  
+    left: 5%;
+    top: 15%;
+
+}
+
+.cabecera-logo-mobil a{
+    font-family: "Open Sans",sans-serif;
+    color:rgba(255, 255, 255, 1)
+}
+
+
+
+.cabecera-menu-web{
+    width:70%;  
+    float:right; 
+    position: absolute;  
+    top: 10%; 
+    left: 50%;
+    background-color: #24426e;
+    background: linear-gradient(314.08deg, #24426e 0%, #09111c 36.72%, #24426e 100%);
+ 
+}
+
+
+.cabecera-menu-web ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    /* convertir en caja flexible y de e forma horizontal*/
+    display: flex;
+    /* posicion del menu de forma horizontal*/
+    flex-direction: row;
+
+    /* para centrar el texto sobre la barra
+    justify-content: center; */
+}
+
+.cabecera-menu-web li{
+    /*text-align: center;*/
+
+    /* centrar texto 
+    flex-grow: 1; */
+}
+
+.cabecera-menu-web li:hover a{
+    cursor: pointer;
+    /* Efecto sombreado sobre el menu */
+    text-decoration: underline white;
+}
+
+.cabecera-menu-web li a{
+    font-family: "Open Sans",sans-serif;
+    display: block;
+    /* separacion vertical y horizontal de menu */
+    padding: 10px 20px;
+    color: #fff;
+    /*quita la linea de link del texto*/
+    text-decoration: none;
+}
+
+
+
+#cuerpo{
+        top: 100%;
+        padding: 0px;
+        margin: 0px;
+        width: 98%;
+        height: 70%;
+        position: absolute;
+     
+    }
+#cuerpo h1{
+    font-family: "Open Sans",sans-serif;
+    font-size: 20px;
+}
+
+#izquierda{
+        padding: 1px;
+        width: 30%;
+        height: 70%;
+        background-color: #f4f4f4;
+        float: left;
+        box-sizing: border-box;
+
+        -webkit-box-shadow: 9px -11px 49px -4px rgba(36,66,110,1);
+        -moz-box-shadow: 9px -11px 49px -4px rgba(36,66,110,1);
+        box-shadow: 9px -11px 49px -4px rgba(36,66,110,1);
+
+    }
+
+
+#centro{
+        padding: 2px;
+        margin: 0px 25px;
+        width: 35%;
+        height: 70%;
+        float: left;
+        background-color: #ffffff; 
+        box-sizing: border-box;  
+
+        -webkit-box-shadow: 9px -11px 49px -4px rgba(36,66,110,1);
+-moz-box-shadow: 9px -11px 49px -4px rgba(36,66,110,1);
+box-shadow: 9px -11px 49px -4px rgba(36,66,110,1);     
+    }
+
+/* Efecto sombreado de la caja */
+/* https://www.cssmatic.com/es/box-shadow */
+
+#derecha{
+        padding: 10px;
+        margin: 0px;
+        width: 30%;
+        height: 70%;
+        background-color: #f4f4f4;             
+        float: right;
+        box-sizing: border-box;
+
+        -webkit-box-shadow: 9px -11px 49px -4px rgba(36,66,110,1);
+        -moz-box-shadow: 9px -11px 49px -4px rgba(36,66,110,1);
+        box-shadow: 9px -11px 49px -4px rgba(36,66,110,1);
+    }
+
+
+.contener-conocenos-interior {
+    line-height: 15px;
+    margin: 15% 10%;
+   
+}
+
+.contener-conocenos-interior p{
+    font-family: "Open Sans",sans-serif;
+    font-size: 13px;
+}
+
+
+.div-contactanos{
+        top: 170%;
+        padding: 0px;
+        margin: 0px;
+        width: 98%;
+        height: 100%;
+        position: absolute;
+      
+}
+
+.contenerdor-contactanos-interior{
+        font-family: "Open Sans",sans-serif;
+        top: 150%;
+        padding: 0px;
+        margin: 0px;
+        width: 98%;
+        height: 60%;
+       
+}
+.contenerdor-contactanos-interior li{
+    padding: 10px 40px 60px 50px;
+    list-style: none;
+}
+ .cajas-redondas {
+   border-radius: 5px;
+ }
+
+
+
+/* libreria de hover  radial out*/
+/* http://ianlunn.github.io/Hover/ */
+/* https://codepen.io/vulchivijay/pen/KwBGjX */
+
+.boton3 {
+  color: #24426e !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: rgba(0,0,0,0);
+  border: 2px solid;
+  border-color: #318aac;
+  transition: all 1s ease;
+  position: relative;
+}
+.boton3:hover {
+  background: #24426e;
+  color: #fff !important;
+}
+
+
+
+.underline {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+}
+.underline:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: -5px;
+  background: #000;
+  height: 4px;
+  transition-property: left right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+  right: 0;
+}
+
+
+
+
+
+
+/*************  usuario ********************/
+/*  Descargar iconos
+https://iconos8.es/icon/set/admin/all */
+.inputWithIcon{
+    position: relative;
+
+}
+.inputWithIcon input[type=text] {
+    background: url("user-1.png") no-repeat scroll 0 0 transparent;
+    background-size: 25px 25px;
+    border: 0px solid #BFBFBF;
+    color: #BFBFBF;
+    padding: 1px 5px 5px 35px;
+    width: 260px;
+    height: 30px;
+    outline:0px;
+
+}
+
+.inputWithIcon i{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    padding: 5px 8px;
+    color:  #aaa;
+    transition: .3s;
+}
+
+
+
+.inputWithIcon input[type=text]:focus{
+    color: dodgerBlue;
+    background: url("user-1-fondo.png") no-repeat scroll 0 0 transparent;
+    background-size: 25px 25px;
+}
+
+.inputWithIcon {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+}
+
+.inputWithIcon:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: -5px;
+  background: #000;
+  height: 4px;
+  transition-property: left right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.inputWithIcon:hover:after,
+.inputWithIcon:focus:after,
+.inputWithIcon:active:after {
+  right: 0;
+}
+
+/*********************  CELULAR  **********************/
+.inputWithIcon-celular{
+    position: relative;
+
+}
+.inputWithIcon-celular input[type=text] {
+    background: url("cel-1.png") no-repeat scroll 0 0 transparent;
+    background-size: 25px 25px;
+    border: 0px solid #BFBFBF;
+    color: #BFBFBF;
+    padding: 1px 5px 5px 35px;
+    width: 260px;
+    height: 30px;
+    outline:0px;
+
+}
+
+.inputWithIcon-celular i{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    padding: 5px 8px;
+    color:  #aaa;
+    transition: .3s;
+}
+
+
+
+.inputWithIcon-celular input[type=text]:focus{
+    color: dodgerBlue;
+    background: url("cel-1-fondo.png") no-repeat scroll 0 0 transparent;
+    background-size: 25px 25px;
+}
+
+.inputWithIcon-celular {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+}
+
+.inputWithIcon-celular:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: -5px;
+  background: #000;
+  height: 4px;
+  transition-property: left right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.inputWithIcon-celular:hover:after,
+.inputWithIcon-celular:focus:after,
+.inputWithIcon-celular:active:after {
+  right: 0;
+}
+
+/****************** CORREO ELECTONICO ******************************/
+.inputWithIcon-correo{
+    position: relative;
+
+}
+.inputWithIcon-correo input[type=text] {
+    background: url("correo-1.png") no-repeat scroll 0 0 transparent;
+    background-size: 25px 25px;
+    border: 0px solid #BFBFBF;
+    color: #BFBFBF;
+    padding: 1px 5px 5px 35px;
+    width: 260px;
+    height: 30px;
+    outline:0px;
+
+}
+
+.inputWithIcon-correo i{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    padding: 5px 8px;
+    color:  #aaa;
+    transition: .3s;
+}
+
+
+
+.inputWithIcon-correo input[type=text]:focus{
+    color: dodgerBlue;
+    background: url("correo-1-fondo.png") no-repeat scroll 0 0 transparent;
+    background-size: 25px 25px;
+}
+
+.inputWithIcon-correo {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+}
+
+.inputWithIcon-correo:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: -5px;
+  background: #000;
+  height: 4px;
+  transition-property: left right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.inputWithIcon-correo:hover:after,
+.inputWithIcon-correo:focus:after,
+.inputWithIcon-correo:active:after {
+  right: 0;
+}
+
+/****************** DETALLE *********************/
+.inputWithIcon-detalle{
+    position: relative;
+
+}
+.inputWithIcon-detalle textarea {
+    background: url("det-1.png") no-repeat scroll 0 0 transparent;
+    background-size: 25px 25px;
+    border: 0px solid #BFBFBF;
+    color: #BFBFBF;
+    padding: 1px 5px 5px 35px;
+    width: 260px;
+    height:100px;
+    outline:0px;
+
+}
+
+.inputWithIcon-detalle i{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    padding: 5px 8px;
+    color:  #aaa;
+    transition: .3s;
+}
+
+
+
+.inputWithIcon-detalle textarea:focus{
+    color: dodgerBlue;
+    background: url("det-1-fondo.png") no-repeat scroll 0 0 transparent;
+    background-size: 25px 25px;
+}
+
+.inputWithIcon-detalle {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+}
+
+.inputWithIcon-detalle:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: -5px;
+  background: #000;
+  height: 4px;
+  transition-property: left right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.inputWithIcon-detalle:hover:after,
+.inputWithIcon-detalle:focus:after,
+.inputWithIcon-detalle:active:after {
+  right: 0;
+}
+
